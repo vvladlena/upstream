@@ -899,7 +899,7 @@ select {
   line-height: 150%; }
   .footer__inner::before {
     position: absolute;
-    content: url("/../images/background/footer.png");
+    content: url("../images/background/footer.png");
     left: 50px;
     bottom: -1%;
     right: 0;

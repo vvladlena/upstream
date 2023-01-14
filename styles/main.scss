@@ -1,0 +1,39 @@
+$containerWidth: 1000px;
+$baseFontSize: 16px;
+
+$firstColor: #002D6A;
+$secondaryColor: #FDCC00;
+$thirdColor: #FFB705;
+$lightColor: #fff;
+$darkColor: #000;
+
+$z-fixed-menu: 100%;
+
+
+
+$baseFontFamily:'Bitter', serif;
+$secondaryFontFamily:'Playfair Display', serif;
+
+$tablets: 768px;
+$phones: 480px;
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap');
+
+@import "layout/normalize";
+@import "layout/media";
+
+@import "layout/base";
+@import "blocks/menu";
+@import "blocks/logo";
+@import "blocks/button";
+@import "blocks/header";
+@import "blocks/section";
+@import "blocks/intro";
+@import "blocks/about";
+@import "blocks/cards";
+@import "blocks/level";
+@import "blocks/video";
+@import "blocks/webinar";
+@import "blocks/reviews";
+@import "blocks/questions";
+@import "blocks/footer";

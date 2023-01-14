@@ -1,0 +1,92 @@
+html {
+    font-size: $baseFontSize;
+
+    @include tablets {
+        font-size: $baseFontSize - 3px;
+    }
+
+    @include phones {
+        font-size: $baseFontSize - 4px;
+    }
+
+}
+
+
+body {
+    font-family: $baseFontFamily;
+    line-height: 1.42;
+    margin: 0 auto;
+    color: $darkColor;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+
+}
+
+a {
+    color: inherit;
+display: block;
+}
+
+
+footer {
+    margin-top: auto;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    font-weight: normal;
+}
+
+p {
+    margin-top: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    max-width: $containerWidth;
+    position: relative;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.title-style{
+    font-family: $secondaryFontFamily;
+    color: $firstColor;
+    font-size: rem(50px);
+    margin-bottom: rem(80px);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.title-style--light{
+    color: $lightColor
+}

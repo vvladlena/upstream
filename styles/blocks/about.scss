@@ -1,0 +1,49 @@
+
+.about__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: rem(130px);
+}
+.about__list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.about__item{
+    position: relative;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: rem(30px);
+
+    &:after{
+        position: absolute;
+        right: rem(-15px);
+        content: url('../images/decor/about-line.png');
+    }
+
+    &:last-child{
+        margin-right: 0;
+        &::after{
+            content: none;
+        }
+    }
+}
+
+.about__name{
+    color: $secondaryColor;
+    font-size: rem(24px);
+    margin-bottom: rem(40px);
+}
+.about__image{
+    width: 100px;
+    height: 100px;
+    margin-bottom: rem(40px);
+}
+.about__description{
+    color: $lightColor;
+    text-align: center;
+}

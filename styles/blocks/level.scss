@@ -1,0 +1,35 @@
+.level__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: rem(200px);
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: url('../images/main/level-image.svg');
+        right: -60px;
+        bottom: -50px;
+    }
+}
+
+.level__description {
+    color: $lightColor;
+    display: flex;
+    margin-bottom: rem(40px);
+    line-height: 150%;
+}
+
+.level__description-text {
+    width: rem(300px);
+    margin-right: rem(50px);
+}
+
+.level__buttons {
+    display: flex;
+    align-items: center;
+
+    .btn-style--default {
+        margin-right: rem(110px);
+    }
+}

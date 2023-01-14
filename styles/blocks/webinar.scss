@@ -1,0 +1,22 @@
+.webinar__inner{
+    padding-top: rem(160px);
+    // text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: url('../images/main/webinar-image.svg');
+        left: 0;
+        bottom: -30px;
+    }
+}
+
+.webinar__description{
+    width: rem(500px);
+    margin-bottom: rem(40px);
+    color: $lightColor;
+}

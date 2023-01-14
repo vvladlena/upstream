@@ -1,0 +1,14 @@
+.header {
+    height: rem(117px);
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+select {
+    border: none;
+}

@@ -1,0 +1,46 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(240px);
+    height: rem(46px);
+    border-radius: 24px;
+    font-size: rem(16px);
+    padding: 5px;
+    border: 1px solid $darkColor;
+    font-weight: 500;
+
+    &:hover {
+        background-color: $thirdColor;
+        color: $firstColor;
+    }
+
+    &__name {
+        margin-right: rem(15px);
+    }
+}
+
+.button__image {
+    background: url('../images/icons/button-arrow-dark.svg') center center no-repeat;
+    width: 8px;
+    height: 16px;
+}
+
+.btn-style--default {
+    background-color: $secondaryColor;
+    color: $firstColor;
+}
+
+.btn-style--light {
+    background-color: $lightColor;
+    color: $darkColor;
+}
+
+.btn-style--dark {
+    background-color: $firstColor;
+    color: $lightColor;
+
+    .button__image {
+        background: url('../images/icons/button-arrow-light.svg') center center no-repeat;
+    }
+}

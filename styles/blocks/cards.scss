@@ -1,0 +1,113 @@
+.cards__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards__language {
+    display: flex;
+    margin-bottom: rem(40px);
+}
+
+.cards__language-item {
+    margin-right: rem(44px);
+    font-weight: 500;
+}
+
+.language-active {
+    color: $firstColor;
+    border-bottom: 1px solid $firstColor;
+}
+
+.cards__list {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.cards__item {
+    display: flex;
+    flex-direction: column;
+    background: $firstColor;
+    border: 1px solid $darkColor;
+    border-radius: 12px;
+    padding: rem(40px) rem(20px);
+    margin-right: rem(50px);
+    color: $lightColor;
+    max-width: rem(300px);
+    z-index: 1;
+
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        background: $secondaryColor;
+        color: $darkColor;
+
+        .btn-style--default .button__image {
+            background: url('../images/icons/button-arrow-light.svg') center center no-repeat;
+        }
+
+        .btn-style--default {
+            background-color: $firstColor;
+            color: $lightColor;
+
+            &:hover {
+                background-color: $thirdColor;
+                // color: $firstColor;
+            }
+        }
+    }
+}
+
+.card__name {
+    font-size: rem(24px);
+    margin-bottom: rem(30px);
+    font-weight: 500;
+}
+
+.card__description-title {
+    font-weight: 500;
+    margin-bottom: rem(10px);
+}
+
+.card__description-list {
+    margin-bottom: rem(20px);
+}
+
+.card__description-item {
+    margin-bottom: rem(10px);
+}
+
+.card__price {
+    font-size: rem(24px);
+    font-weight: 500;
+    margin-bottom: rem(30px);
+}
+
+.card__buttons .btn-style--light {
+    margin-bottom: rem(20px);
+}
+
+.cards__arrows {
+    position: absolute;
+    display: flex;
+    width: 120%;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 35%;
+}
+
+.card__image{
+    width: rem(260px);
+    height: rem(180px);
+    margin-bottom: rem(30px);
+}
+
+.card__image-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}

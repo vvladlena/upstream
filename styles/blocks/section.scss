@@ -1,0 +1,46 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(70px);
+}
+
+.about {
+    background: url('../images/background/about.png') center center no-repeat;
+    background-size: 100% 100%;
+    height: rem(900px);
+
+}
+
+.courses {
+    background: url('../images/decor/courses-decor.svg') center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.level {
+    background: url('../images/background/level.png') center center no-repeat;
+    background-size: 100% 100%;
+    height: rem(720px);
+}
+
+.video {
+    background: url('../images/decor/video-decor.svg') center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.webinar {
+    background: url('../images/background/webinar.png') center center no-repeat;
+    background-size: 100% 100%;
+    height: rem(700px);
+}
+
+.teachers {
+    background: url('../images/decor/teachers-decor.svg') center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.reviews{
+    background: url('../images/background/reviews.png') center center no-repeat;
+    background-size: 100% 100%;
+    height: rem(900px);
+}
+

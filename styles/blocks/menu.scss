@@ -1,0 +1,96 @@
+.menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        font-size: rem(19px);
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: rem(220px);
+        margin-left: -16px;
+        padding: 17px 0;
+        background: $lightColor;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transform: translateX(500%);
+        transition: transform .2s;
+        will-change: transform;
+        backface-visibility: hidden;
+        z-index: 9;
+        height: 100vh;
+        margin-right: 0;
+    }
+}
+
+.menu__item {
+    margin-right: rem(50px);
+
+    @include tablets {
+        margin-right: 0;
+    }
+
+    &:hover {
+       color: $thirdColor;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav__check {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.nav__check:checked~.nav__back {
+    background-color: rgba(0, 0, 0, .2);
+    bottom: 0;
+}
+
+
+
+
+//size of burger lines
+.nav__showmenu {
+    display: none;
+
+    @include tablets {
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+        padding: 5px 10px 10px;
+        font-size: rem(50px);
+    }
+}
+
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+.nav__check:checked+.nav__showmenu {
+    color: $secondaryColor;
+}
+
+.menu__check:checked~.menu__submenu {
+    max-height: 100vh;
+}
+
+.menu__check:checked+.menu__showsub {
+    transform: rotate(180deg);
+}
+
+.nav__check:checked~.menu__list {
+    transform: translateX(10%);
+}

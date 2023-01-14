@@ -1,0 +1,81 @@
+.reviews__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: rem(170px);
+}
+
+.reviews__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(40px) rem(50px);
+
+}
+
+.review__image {
+    min-width: rem(200px);
+    min-height: rem(200px);
+    border: 1px solid $firstColor;
+    margin-right: rem(100px);
+    // margin-right: 100px;
+}
+
+.review__image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $lightColor;
+    border-radius: 12px;
+    border: 10px solid $secondaryColor;
+    margin-bottom: rem(40px);
+}
+
+
+.reviews__people{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.review__name{
+    font-weight: 500;
+    margin-bottom: rem(20px);
+}
+
+.people__image {
+    width: rem(60px);
+    height: rem(60px);
+    margin-right: rem(10px);
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.people__image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 4px solid transparent;
+    
+    &:hover{
+        border: 4px solid $secondaryColor;
+    }
+
+}

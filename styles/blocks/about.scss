@@ -1,16 +1,21 @@
-
 .about__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: rem(130px);
 }
-.about__list{
+
+.about__list {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    z-index: 1;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
-.about__item{
+
+.about__item {
     position: relative;
     width: 30%;
     display: flex;
@@ -18,32 +23,62 @@
     align-items: center;
     justify-content: center;
     margin-right: rem(30px);
+    text-align: center;
 
-    &:after{
+    &:after {
         position: absolute;
         right: rem(-15px);
         content: url('../images/decor/about-line.png');
-    }
 
-    &:last-child{
-        margin-right: 0;
-        &::after{
+        @include tablets {
             content: none;
         }
     }
+
+    &:last-child {
+        margin-right: 0;
+
+        &::after {
+            content: none;
+        }
+    }
+
+    @include phones {
+        width: 100%;
+        flex-direction: row;
+        margin-right: 0;
+        text-align: start;
+        margin-bottom: 30px;
+        justify-content: start;
+        align-items: start;
+    }
 }
 
-.about__name{
+.about__text {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.about__name {
     color: $secondaryColor;
     font-size: rem(24px);
-    margin-bottom: rem(40px);
+    margin-bottom: rem(25px);
+    white-space: nowrap;
 }
-.about__image{
+
+.about__image {
     width: 100px;
     height: 100px;
-    margin-bottom: rem(40px);
+    margin-bottom: rem(30px);
+
+    @include phones{
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
 }
-.about__description{
+
+.about__description {
     color: $lightColor;
-    text-align: center;
 }

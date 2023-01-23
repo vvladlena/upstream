@@ -13,33 +13,25 @@
     font-weight: 500;
 }
 
-.language-active {
+.tabs__btn_active {
     color: $firstColor;
     border-bottom: 1px solid $firstColor;
 }
+.tabs__pane {
+    display: none;
+  }
+  
+  .tabs__pane_show {
+    display: block;
+  }
 
-.cards__list {
-    display: flex;
-    position: relative;
-    justify-content: center;
-}
 
-.cards__item {
-    display: flex;
-    flex-direction: column;
+.card {
     background: $firstColor;
-    border: 1px solid $darkColor;
-    border-radius: 12px;
+    border-radius: 30px;
     padding: rem(40px) rem(20px);
-    margin-right: rem(50px);
     color: $lightColor;
-    max-width: rem(300px);
-    z-index: 1;
-
-
-    &:last-child {
-        margin-right: 0;
-    }
+    border: 8px solid $lightColor;
 
     &:hover {
         background: $secondaryColor;
@@ -58,6 +50,10 @@
                 // color: $firstColor;
             }
         }
+    }
+
+    @include phones{
+        text-align: center;
     }
 }
 
@@ -110,4 +106,10 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+.card__buttons{
+.button{
+    max-width: 100%;
+}
 }

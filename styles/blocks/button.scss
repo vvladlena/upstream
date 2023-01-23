@@ -2,10 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: rem(240px);
+    width: 230px;
     height: rem(46px);
     border-radius: 24px;
-    font-size: rem(16px);
+    font-size: 16px;
     padding: 5px;
     border: 1px solid $darkColor;
     font-weight: 500;
@@ -16,7 +16,15 @@
     }
 
     &__name {
-        margin-right: rem(15px);
+        margin-right: 10%;
+    }
+
+    @include tablets {
+        width: 213px;
+    }
+
+    @include phones {
+        width: 100%;
     }
 }
 

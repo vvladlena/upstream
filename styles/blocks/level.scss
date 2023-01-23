@@ -2,14 +2,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: rem(200px);
+    padding: rem(200px) 0;
     position: relative;
 
-    &::after{
+    &::after {
         position: absolute;
-        content: url('../images/main/level-image.svg');
-        right: -60px;
-        bottom: -50px;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/main/level-image.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 30% auto;
+        top: rem(100px);
+
+        @include tablets {
+            content: none;
+        }
+    }
+
+
+    @include phones {
+        text-align: center;
+        align-items: center;
+
     }
 }
 
@@ -18,18 +34,57 @@
     display: flex;
     margin-bottom: rem(40px);
     line-height: 150%;
+    width: 70%;
+
+    @include tablets {
+        width: 100%;
+    }
+
+    @include phones {
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-items: center;
+    }
 }
 
 .level__description-text {
-    width: rem(300px);
     margin-right: rem(50px);
+    width: 50%;
+
+    @include phones {
+        margin-right: 0;
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }
 
 .level__buttons {
     display: flex;
     align-items: center;
+    width: 70%;
 
-    .btn-style--default {
-        margin-right: rem(110px);
+
+    @include tablets {
+        width: 100%;
+        align-items: start;
+
     }
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .button {
+        width: 50%;
+        margin-right: rem(50px);
+
+        @include phones {
+            margin-right: 0;
+            width: 90%;
+            margin-bottom: 20px;
+        }
+    }
+
 }

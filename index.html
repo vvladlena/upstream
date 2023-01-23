@@ -8,7 +8,21 @@
     <link rel="stylesheet" href="./styles/main.css">
 
     <link rel="icon" href="./favicon.svg">
+
+
+
     <title>Upstream - Language school</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = new ItcTabs('.tabs');
+            ItcSlider.getOrCreateInstance('.tabs__pane_show .itc-slider');
+            document.querySelector('.tabs').addEventListener('tab.itc.change', () => {
+                ItcSlider.getOrCreateInstance('.tabs__pane_show .itc-slider');
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -89,20 +103,27 @@
                         <h2 class="about__title title-style title-style--light">Про нас</h2>
                         <ul class="about__list">
                             <li class="about__item">
-                                <div class="about__name">Сучасні методики</div>
                                 <img src="./images/icons/reading.svg" alt="book" class="about__image">
-                                <div class="about__description">Навчання в комфортних міні-групах по 4-6 чоловік.</div>
+                                <div class="about__text">
+                                    <div class="about__name">Сучасні методики</div>
+                                    <div class="about__description">Навчання в комфортних міні-групах по 4-6 чоловік.
+                                    </div>
+                                </div>
                             </li>
                             <li class="about__item">
-                                <div class="about__name">Онлайн</div>
                                 <img src="./images/icons/globe.svg" alt="globe" class="about__image">
-                                <div class="about__description">Навчання в комфортних міні-групах по 4-6 чоловік в
-                                    комфортних міні-групах.</div>
+                                <div class="about__text">
+                                    <div class="about__name">Онлайн</div>
+                                    <div class="about__description">Навчання в комфортних міні-групах по 4-6 чоловік в
+                                        комфортних міні-групах.</div>
+                                </div>
                             </li>
                             <li class="about__item">
-                                <div class="about__name">Досвіченість</div>
                                 <img src="./images/icons/class.svg" alt="class" class="about__image">
-                                <div class="about__description">Навчання в комфортних міні-групах.</div>
+                                <div class="about__text">
+                                    <div class="about__name">Досвіченість</div>
+                                    <div class="about__description">Навчання в комфортних міні-групах.</div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -113,93 +134,282 @@
                 <div class="container">
                     <div class="cards__inner">
                         <h2 class="cards__title title-style">Курси</h2>
-                        <ul class="cards__language">
-                            <li class="cards__language-item language-active">Англійська мова</li>
-                            <li class="cards__language-item">Польська мова</li>
-                        </ul>
-                        <ul class="cards__list">
-                            <div class="cards__arrows">
-                                <a href="#" class="arrow arrow-left">
-                                    <img src="./images/icons/left.svg" alt="arrow left" class="arrow__img">
-                                </a>
-                                <a href="#" class="arrow arrow-right">
-                                    <img src="./images/icons/right.svg" alt="arrow right" class="arrow__img">
-                                </a>
+                        <div class="tabs">
+                            <div class="tabs__nav cards__language">
+                                <button class="tabs__btn tabs__btn_active cards__language-item ">Англійська
+                                    мова</button>
+                                <button class="tabs__btn cards__language-item ">Польська мова</button>
                             </div>
-                            <li class="cards__item card">
-                                <div class="card__name">Загальний курс англійської мови</div>
-                                <div class="card__description">
-                                    <div class="card__description-title"> Що на вас чекає:</div>
-                                    <ul class="card__description-list">
-                                        <li class="card__description-item">&#10004 2 заняття на тиждень</li>
-                                        <li class="card__description-item">&#10004 80 хвилин </li>
-                                        <li class="card__description-item">&#10004 4-6 осіб у групі</li>
-                                        <li class="card__description-item">&#10004 8 місяців (один рівень)</li>
-                                    </ul>
-                                </div>
-                                <div class="card__price">400 зл/міс</div>
-                                <div class="card__buttons">
-                                    <a href="#" class="button btn-style--light">
-                                        <div class="button__name">Детальніше</div>
-                                        <div class="button__image"></div>
-                                    </a>
-                                    <a href="#" class="button btn-style--default">
-                                        <div class="button__name">Записатись на курс </div>
-                                        <div class="button__image"></div>
-                                    </a>
-                                </div>
-                            </li>
+                            <div class="tabs__content">
+                                <div class="tabs__pane tabs__pane_show">
+                                    <div class="itc-slider" id="slider-1" data-loop="true">
+                                        <div class="itc-slider__wrapper">
+                                            <div class="itc-slider__items">
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Загальний курс англійської мови</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
 
-                            <li class="cards__item card">
-                                <div class="card__name">Розмовний курс англійської мови</div>
-                                <div class="card__description">
-                                    <div class="card__description-title"> Що на вас чекає:</div>
-                                    <ul class="card__description-list">
-                                        <li class="card__description-item">&#10004 2 заняття на тиждень</li>
-                                        <li class="card__description-item">&#10004 80 хвилин </li>
-                                        <li class="card__description-item">&#10004 4-6 осіб у групі</li>
-                                        <li class="card__description-item">&#10004 8 місяців (один рівень)</li>
-                                    </ul>
-                                </div>
-                                <div class="card__price">400 зл/міс</div>
-                                <div class="card__buttons">
-                                    <a href="#" class="button btn-style--light">
-                                        <div class="button__name">Детальніше</div>
-                                        <div class="button__image"></div>
-                                    </a>
-                                    <a href="#" class="button btn-style--default">
-                                        <div class="button__name">Записатись на курс </div>
-                                        <div class="button__image"></div>
-                                    </a>
-                                </div>
-                            </li>
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Розмовний курс англійської мови</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
 
-                            <li class="cards__item cards">
-                                <div class="card__name">Англійська мова з 0 для дорослих</div>
-                                <div class="card__description">
-                                    <div class="card__description-title"> Що на вас чекає:</div>
-                                    <ul class="card__description-list">
-                                        <li class="card__description-item">&#10004 2 заняття на тиждень</li>
-                                        <li class="card__description-item">&#10004 80 хвилин </li>
-                                        <li class="card__description-item">&#10004 4-6 осіб у групі</li>
-                                        <li class="card__description-item">&#10004 8 місяців (один рівень)</li>
-                                    </ul>
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Англійська мова з 0 для дорослих</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Курс англійської 4</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Курс англійської 5</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <button class="itc-slider__btn itc-slider__btn_prev"></button>
+                                        <button class="itc-slider__btn itc-slider__btn_next"></button>
+                                    </div>
                                 </div>
-                                <div class="card__price">400 зл/міс</div>
-                                <div class="card__buttons">
-                                    <a href="#" class="button btn-style--light">
-                                        <div class="button__name">Детальніше</div>
-                                        <div class="button__image"></div>
-                                    </a>
-                                    <a href="#" class="button btn-style--default">
-                                        <div class="button__name">Записатись на курс </div>
-                                        <div class="button__image"></div>
-                                    </a>
+
+                                <div class="tabs__pane">
+                                    <div class="itc-slider" id="slider-2" data-loop="true">
+                                        <div class="itc-slider__wrapper">
+                                            <div class="itc-slider__items">
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Польска мова 1</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Польска мова 2</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Польска мова 3</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="itc-slider__item card">
+                                                    <div class="card__name">Польска мова 4</div>
+                                                    <div class="card__description">
+                                                        <div class="card__description-title"> Що на вас чекає:</div>
+                                                        <ul class="card__description-list">
+                                                            <li class="card__description-item">&#10004 2 заняття на
+                                                                тиждень</li>
+                                                            <li class="card__description-item">&#10004 80 хвилин </li>
+                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            </li>
+                                                            <li class="card__description-item">&#10004 8 місяців (один
+                                                                рівень)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__price">400 зл/міс</div>
+                                                    <div class="card__buttons">
+                                                        <a href="#" class="button btn-style--light">
+                                                            <div class="button__name">Детальніше</div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                        <a href="#" class="button btn-style--default">
+                                                            <div class="button__name">Записатись на курс </div>
+                                                            <div class="button__image"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <button class="itc-slider__btn itc-slider__btn_prev"></button>
+                                        <button class="itc-slider__btn itc-slider__btn_next"></button>
+                                    </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
+
+
+                            </div>
+                        </div>
             </section>
 
 
@@ -269,51 +479,66 @@
                     <div class="cards__inner">
                         <h2 class="cards__title title-style">Наші викладачі</h2>
 
-                        <ul class="cards__list">
-                            <div class="cards__arrows">
-                                <a href="#" class="arrow arrow-left">
-                                    <img src="./images/icons/left.svg" alt="arrow left" class="arrow__img">
-                                </a>
-                                <a href="#" class="arrow arrow-right">
-                                    <img src="./images/icons/right.svg" alt="arrow right" class="arrow__img">
-                                </a>
+                        <div class="itc-slider itc-slider-3" data-slider="itc-slider" data-loop="true">
+                            <div class="itc-slider__wrapper">
+                                <div class="itc-slider__items">
+                                    <div class="itc-slider__item card">
+                                        <div class="card__name">Олена Колеснікова</div>
+                                        <div class="card__image">
+                                            <img src="./images/main/teacher-1.jpg" alt="english teacher"
+                                                class="card__image-img">
+                                        </div>
+                                        <div class="card__description"> Засновниця школи. Викладач із 10-річним
+                                            досвідом.
+                                        </div>
+                                    </div>
+                                    <div class="itc-slider__item card">
+                                        <div class="card__name">Викладач номер два</div>
+                                        <div class="card__image">
+                                            <img src="./images/main/teacher-1.jpg" alt="english teacher"
+                                                class="card__image-img">
+                                        </div>
+                                        <div class="card__description"> Засновниця школи. Викладач із 10-річним
+                                            досвідом.
+                                        </div>
+                                    </div>
+                                    <div class="itc-slider__item card">
+                                        <div class="card__name">Викладач номер три</div>
+                                        <div class="card__image">
+                                            <img src="./images/main/teacher-1.jpg" alt="english teacher"
+                                                class="card__image-img">
+                                        </div>
+                                        <div class="card__description"> Засновниця школи. Викладач із 10-річним
+                                            досвідом.
+                                        </div>
+                                    </div>
+                                    <div class="itc-slider__item card">
+                                        <div class="card__name">Викладач номер чотири</div>
+                                        <div class="card__image">
+                                            <img src="./images/main/teacher-1.jpg" alt="english teacher"
+                                                class="card__image-img">
+                                        </div>
+                                        <div class="card__description"> Засновниця школи. Викладач із 10-річним
+                                            досвідом.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <li class="cards__item card">
-                                <div class="card__name">Олена Колеснікова</div>
-                                <div class="card__image">
-                                    <img src="./images/main/teacher-1.jpg" alt="english teacher"
-                                        class="card__image-img">
-                                </div>
-                                <div class="card__description"> Засновниця школи. Викладач із 10-річним досвідом. </div>
-                            </li>
-                            <li class="cards__item card">
-                                <div class="card__name">Олена Колеснікова</div>
-                                <div class="card__image">
-                                    <img src="./images/main/teacher-1.jpg" alt="english teacher"
-                                        class="card__image-img">
-                                </div>
-                                <div class="card__description"> Засновниця школи. Викладач із 10-річним досвідом.
-                                    Засновниця школи. Викладач із 10-річним досвідом.</div>
-                            </li>
-                            <li class="cards__item card">
-                                <div class="card__name">Олена Колеснікова</div>
-                                <div class="card__image">
-                                    <img src="./images/main/teacher-1.jpg" alt="english teacher"
-                                        class="card__image-img">
-                                </div>
-                                <div class="card__description"> Засновниця школи. Викладач із 10-річним досвідом. </div>
-                            </li>
-                        </ul>
+                            <button class="itc-slider__btn itc-slider__btn_prev"></button>
+                            <button class="itc-slider__btn itc-slider__btn_next"></button>
+                        </div>
                     </div>
                 </div>
-            </section>
+        </div>
+        </section>
 
-            <section id="reviews" class="section reviews">
-                <div class="container">
-                    <div class="reviews__inner">
-                        <h2 class="reviews__title title-style title-style--light">Відгуки</h2>
-                        <div class="reviews__content">
-                            <div class="review">
+        <section id="reviews" class="section reviews">
+            <div class="container">
+                <div class="reviews__inner">
+                    <h2 class="reviews__title title-style title-style--light">Відгуки</h2>
+                    <div class="reviews__content">
+                        <ul class="reviews__list">
+                            <li class="reviews__item review review_active" data-linked-with="one">
                                 <div class="review__image">
                                     <img src="./images/main/pupil-1.png" alt="" class="review__image-img">
 
@@ -327,126 +552,164 @@
                                         коли не вдається потрапити на урок. Дякую Вам величезне і продовжуйте в тому ж
                                         дусі!</div>
                                 </div>
-                            </div>
-                            <ul class="reviews__people">
-                                <li class="people__image">
-                                    <img src="./images/main/pupil-1.png" alt="" class="people__image-img">
-                                </li>
-                                <li class="people__image">
-                                    <img src="./images/main/pupil-1.png" alt="" class="people__image-img">
-                                </li>
-                                <li class="people__image">
-                                    <img src="./images/main/pupil-1.png" alt="" class="people__image-img">
-                                </li>
-                            </ul>
-                        </div>
+                            </li>
+                            <li class="reviews__item review" data-linked-with="two">
+                                <div class="review__image">
+                                    <img src="./images/main/pupil-2.jpeg" alt="" class="review__image-img">
 
-                    </div>
-                </div>
-            </section>
+                                </div>
+                                <div class="review__info">
+                                    <div class="review__name">Студент 2</div>
+                                    <div class="review__text">Я дуже радий, що потрапив до такого викладача, до Олени,
+                                        яка створює сучасні уроки, торкається сучасних тем, і який підтримує дружню
+                                        атмосферу на занятті. За все своє життя на жодному уроці англійської я так
+                                        багато не посміхався) Завжди із задоволенням йду на заняття, і дуже засмучуюсь,
+                                        коли не вдається потрапити на урок. Дякую Вам величезне і продовжуйте в тому ж
+                                        дусі!</div>
+                                </div>
+                            </li>
+                            <li class="reviews__item review" data-linked-with="three">
+                                <div class="review__image">
+                                    <img src="./images/main/pupil-3.jpeg" alt="" class="review__image-img">
 
-            <section class="section questions">
-                <div class="container">
-                    <div class="questions__inner">
-                        <h2 class="questions__title title-style">Ваші питання</h2>
-                        <ul class="questions__list">
-                            <li class="questions__item question question--active">
-                                <div class="question__title">
-                                    <div class="question__title-text">Хто викладає на курсах? Чи часто змінюються
-                                        викладачі?</div>
-                                    <div class="question__title-symbol">-</div>
                                 </div>
-                                <ul class="question__description">
-                                    <li class="question__text">Наші викладачі — досвідчені кваліфіковані фахівці з
-                                        вищою
-                                        педагогічною та лінгвістичною освітою. Кваліфікацію викладачів також
-                                        підтверджено
-                                        міжнародними сертифікатами TESOL, TKT, IELTS, TOEFL.</li>
-                                    <li class="question__text">Школа залишає за собою право ставити заміни викладачів у
-                                        разі потреби. Крім того, наша політика передбачає, що викладачі змінюються
-                                        протягом
-                                        курсу (кожні 3-4 місяці), щоб надати можливість слухачам навчитися спілкуватися
-                                        з
-                                        різними людьми.</li>
-                                </ul>
-                            </li>
-                            <li class="questions__item question">
-                                <div class="question__title">
-                                    <div class="question__title-text">Хто викладає на курсах? Чи часто змінюються
-                                        викладачі?</div>
-                                    <div class="question__title-symbol">+</div>
-                                </div>
-                            </li>
-                            <li class="questions__item question">
-                                <div class="question__title">
-                                    <div class="question__title-text">Якщо я сплатив декілька занять вперед, але не можу
-                                        продовжити навчання, ви повернете мені гроші?</div>
-                                    <div class="question__title-symbol">+</div>
-                                </div>
-                            </li>
-                            <li class="questions__item question">
-                                <div class="question__title">
-                                    <div class="question__title-text">Хто викладає на курсах? Чи часто змінюються
-                                        викладачі?</div>
-                                    <div class="question__title-symbol">+</div>
-                                </div>
-                            </li>
-                            <li class="questions__item question">
-                                <div class="question__title">
-                                    <div class="question__title-text">Якщо я сплатив декілька занять вперед, але не можу
-                                        продовжити навчання, ви повернете мені гроші?</div>
-                                    <div class="question__title-symbol">+</div>
+                                <div class="review__info">
+                                    <div class="review__name">Студент 3</div>
+                                    <div class="review__text">Я дуже радий, що потрапив до такого викладача, до Олени,
+                                        яка створює сучасні уроки, торкається сучасних тем, і який підтримує дружню
+                                        атмосферу на занятті. За все своє життя на жодному уроці англійської я так
+                                        багато не посміхався) Завжди із задоволенням йду на заняття, і дуже засмучуюсь,
+                                        коли не вдається потрапити на урок. Дякую Вам величезне і продовжуйте в тому ж
+                                        дусі!</div>
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                </div>
-            </section>
 
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer__content">
-                        <div class="footer__logo">
-                            <a href="index.html" class="logo">
-                                <img src="./images/icons/logo.png" alt="" class="logo-img">
-                            </a>
-                        </div>
-                        <div class="footer__inner">
-                            <ul class="footer__list contact">
-                                <li class="footer__item">+48 575 900 751</li>
-                                <li class="footer__item">Gdańsk 80-855, Wały Piastowskie 1, поверх 3, офіс 312 </li>
-                            </ul>
-                            <ul class="footer__list info">
-                                <li class="footer__item">Олена Колеснікова</li>
-                                <li class="footer__item">NIP: 5833466096</li>
-                                <li class="footer__item">REGON: 523883865</li>
-                            </ul>
-                            <div class="footer__socials">
-                                <a href="https://www.instagram.com/natural_english_/" class="footer__image">
-                                    <img src="./images/icons/instagram.svg" alt="instagram icon"
-                                        class="footer__image-img">
+                        <ul class="reviews__switcher">
+                            <li class="reviews__switcher-item interactive-avatar interactive-avatar_active">
+                                <a href="" class="interactive-avatar__link" data-open="one">
+                                    <img src="./images/main/pupil-1.png" alt="" class="interactive-avatar__img">
                                 </a>
-                                <a href="https://t.me/+380958860158" class="footer__image">
-                                    <img src="./images/icons/telegram.svg" alt="telegram icon"
-                                        class="footer__image-img">
+                            </li>
+                            <li class="reviews__switcher-item interactive-avatar">
+                                <a href="" class="interactive-avatar__link" data-open="two">
+                                    <img src="./images/main/pupil-2.jpeg" alt="" class="interactive-avatar__img">
                                 </a>
-                                <a href="#" class="footer__image">
-                                    <img src="./images/icons/facebook.svg" alt="whatsapp icon"
-                                        class="footer__image-img">
+                            </li>
+                            <li class="reviews__switcher-item interactive-avatar">
+                                <a href="" class="interactive-avatar__link" data-open="three">
+                                    <img src="./images/main/pupil-3.jpeg" alt="" class="interactive-avatar__img">
                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section questions">
+            <div class="container">
+                <div class="questions__inner">
+                    <h2 class="questions__title title-style">Ваші питання</h2>
+                    <ul class="questions__list">
+                        <li class="questions__item question question--active">
+                            <div class="question__title">
+                                <div class="question__title-text">Хто викладає на курсах? Чи часто змінюються
+                                    викладачі?</div>
+                                <div class="question__title-symbol">-</div>
                             </div>
-                        </div>
-
-
-                    </div>
+                            <ul class="question__description">
+                                <li class="question__text">Наші викладачі — досвідчені кваліфіковані фахівці з
+                                    вищою
+                                    педагогічною та лінгвістичною освітою. Кваліфікацію викладачів також
+                                    підтверджено
+                                    міжнародними сертифікатами TESOL, TKT, IELTS, TOEFL.</li>
+                                <li class="question__text">Школа залишає за собою право ставити заміни викладачів у
+                                    разі потреби. Крім того, наша політика передбачає, що викладачі змінюються
+                                    протягом
+                                    курсу (кожні 3-4 місяці), щоб надати можливість слухачам навчитися спілкуватися
+                                    з
+                                    різними людьми.</li>
+                            </ul>
+                        </li>
+                        <li class="questions__item question">
+                            <div class="question__title">
+                                <div class="question__title-text">Хто викладає на курсах? Чи часто змінюються
+                                    викладачі?</div>
+                                <div class="question__title-symbol">+</div>
+                            </div>
+                        </li>
+                        <li class="questions__item question">
+                            <div class="question__title">
+                                <div class="question__title-text">Якщо я сплатив декілька занять вперед, але не можу
+                                    продовжити навчання, ви повернете мені гроші?</div>
+                                <div class="question__title-symbol">+</div>
+                            </div>
+                        </li>
+                        <li class="questions__item question">
+                            <div class="question__title">
+                                <div class="question__title-text">Хто викладає на курсах? Чи часто змінюються
+                                    викладачі?</div>
+                                <div class="question__title-symbol">+</div>
+                            </div>
+                        </li>
+                        <li class="questions__item question">
+                            <div class="question__title">
+                                <div class="question__title-text">Якщо я сплатив декілька занять вперед, але не можу
+                                    продовжити навчання, ви повернете мені гроші?</div>
+                                <div class="question__title-symbol">+</div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </footer>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__decor"></div>
+            <div class="container">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item-logo">
+                        <a href="index.html" class="logo footer__logo">
+                            <img src="./images/icons/logo.png" alt="logo" class="logo-img">
+                        </a>
+                    </li>
+                    <li class="footer__item footer__item-data">
+                            <div class="footer__item-text">+48 575 900 751</div>
+                            <div class="footer__item-text">Gdańsk 80-855, Wały Piastowskie 1, поверх 3, офіс 312 </div>
+                    </li>
+                    <li class="footer__item footer__item-data">
+                            <div class="footer__item-text">Олена Колеснікова</div>
+                            <div class="footer__item-text">NIP: 5833466096</div>
+                            <div class="footer__item-text">REGON: 523883865</div>
+                    </li>
+                    <li class="footer__item footer__item-socials">
+                            <a href="https://www.instagram.com/natural_english_/" class="socials__image">
+                                <img src="./images/icons/instagram.svg" alt="instagram icon" class="socials__image-img">
+                            </a>
+                            <a href="https://t.me/+380958860158" class="socials__image">
+                                <img src="./images/icons/telegram.svg" alt="telegram icon" class="socials__image-img">
+                            </a>
+                            <a href="#" class="socials__image">
+                                <img src="./images/icons/facebook.svg" alt="whatsapp icon" class="socials__image-img">
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
 
 
-        </div>
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/tabs.js"></script>
+    <script src="/js/slider.js" defer></script>
+    <script src="/js/reviews.js" defer></script>
+    <script src="/js/acco.js" defer></script>
 </body>
 
 </html>

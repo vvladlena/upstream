@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: rem(170px);
+    padding: rem(170px) 0 rem(60px) 0;
 }
 
 .reviews__content {
@@ -12,20 +12,20 @@
     justify-content: center;
 }
 
-.review {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: rem(40px) rem(50px);
-
-}
 
 .review__image {
     min-width: rem(200px);
     min-height: rem(200px);
+    width: rem(200px);
+    height: rem(200px);
     border: 1px solid $firstColor;
-    margin-right: rem(100px);
-    // margin-right: 100px;
+    margin-right: rem(40px);
+
+    @include phones {
+
+        margin-right: 0;
+        margin-bottom: rem(40px);
+    }
 }
 
 .review__image-img {
@@ -33,6 +33,10 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+.reviews__list{
+    min-height: 300px;
 }
 
 .review {
@@ -43,39 +47,56 @@
     border-radius: 12px;
     border: 10px solid $secondaryColor;
     margin-bottom: rem(40px);
+    padding: 40px 50px;
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+
+    @include tablets {
+        padding: 20px 30px;
+
+    }
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
-
-.reviews__people{
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.review__name{
+.review__name {
     font-weight: 500;
     margin-bottom: rem(20px);
 }
 
-.people__image {
+
+.reviews__item.review_active {
+    position: static;
+    opacity: 1;
+}
+
+
+
+.interactive-avatar {
     width: rem(60px);
     height: rem(60px);
-    margin-right: rem(10px);
+    border: rem(6px) solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
 
-    &:last-child{
-        margin-right: 0;
+    &_active {
+        border-color: $secondaryColor;
+    }
+
+    &:hover {
+        border-color: $secondaryColor;
+        transition: 0.5s;
+
     }
 }
 
-.people__image-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 100%;
-    border: 4px solid transparent;
-    
-    &:hover{
-        border: 4px solid $secondaryColor;
-    }
-
+.reviews__switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }

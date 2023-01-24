@@ -456,8 +456,8 @@ label {
   transform: translateX(10%); }
 
 .logo {
-  max-width: 9.375rem;
-  max-height: 9.375rem; }
+  width: 6.25rem;
+  height: 6.25rem; }
 
 .logo-img {
   width: 100%;
@@ -509,7 +509,8 @@ label {
 .header__content {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 20px 0; }
 
 select {
   border: none; }
@@ -517,43 +518,26 @@ select {
 .section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4.375rem; }
+  margin-bottom: 4.375rem;
+  align-items: center;
+  justify-content: center; }
 
 .intro {
   position: relative;
-  min-height: 43.75rem;
+  min-height: 37.5rem;
   background-color: #002D6A;
   overflow: hidden;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  justify-content: start; }
   @media screen and (max-width: 480px) {
     .intro {
       min-height: 100vh; } }
-  .intro:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    min-width: 300vw;
-    min-height: 300vw;
-    background-color: #FFF;
-    animation-name: rotate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    bottom: 15vh;
-    border-radius: 45%;
-    animation-duration: 10s; }
 
-@keyframes rotate {
-  0% {
-    transform: translate(-50%, 0) rotateZ(0deg); }
-  50% {
-    transform: translate(-50%, -2%) rotateZ(180deg); }
-  100% {
-    transform: translate(-50%, 0%) rotateZ(360deg); } }
 .about {
   background: #002D6A;
   height: auto;
   position: relative;
-  padding: 30px 0;
+  padding-bottom: 30px;
   margin-bottom: 200px; }
   .about:after {
     position: absolute;
@@ -566,12 +550,16 @@ select {
 
 .courses {
   background: url("../images/decor/courses-decor.svg") center center no-repeat;
-  background-size: 100% 100%; }
-
-.level {
-  background: url("../images/background/level.png") center center no-repeat;
   background-size: 100% 100%;
   height: auto; }
+
+.level {
+  background: url("../images/background/level.png") bottom center no-repeat;
+  background-size: 100% 90%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0; }
 
 .video {
   background: url("../images/decor/video-decor.svg") center top no-repeat;
@@ -580,7 +568,10 @@ select {
 .webinar {
   background: url("../images/background/webinar.png") center center no-repeat;
   background-size: 100% 100%;
-  height: auto; }
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0; }
 
 .teachers {
   background: url("../images/decor/teachers-decor.svg") center center no-repeat;
@@ -799,7 +790,9 @@ select {
   border-radius: 30px;
   padding: 2.5rem 1.25rem;
   color: #fff;
-  border: 8px solid #fff; }
+  border: 8px solid #fff;
+  display: flex;
+  flex-direction: column; }
   .card:hover {
     background: #FDCC00;
     color: #000; }
@@ -813,6 +806,12 @@ select {
   @media screen and (max-width: 480px) {
     .card {
       text-align: center; } }
+
+@media screen and (max-width: 768px) {
+  .card_teacher {
+    align-items: center;
+    justify-content: center;
+    text-align: center; } }
 
 .card__name {
   font-size: 1.5rem;
@@ -846,9 +845,11 @@ select {
   bottom: 35%; }
 
 .card__image {
-  width: 16.25rem;
-  height: 11.25rem;
-  margin-bottom: 1.875rem; }
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 1.875rem;
+  width: 260px;
+  height: 180px; }
 
 .card__image-img {
   width: 100%;
@@ -863,8 +864,9 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 12.5rem 0;
-  position: relative; }
+  position: relative;
+  padding-top: 40px;
+  min-height: 700px; }
   .level__inner::after {
     position: absolute;
     content: '';
@@ -944,7 +946,7 @@ select {
   align-items: flex-end;
   justify-content: center;
   position: relative;
-  padding: 170px 0; }
+  min-height: 600px; }
   .webinar__inner::after {
     position: absolute;
     content: '';
@@ -1096,8 +1098,7 @@ select {
 .footer__logo {
   background: #fff;
   border-radius: 100%;
-  width: 100px;
-  height: 100px; }
+  padding: 1.25rem; }
   @media screen and (max-width: 480px) {
     .footer__logo {
       max-width: 45px;
@@ -1146,38 +1147,6 @@ select {
     align-items: center;
     justify-content: center; } }
 
-.footer__decor {
-  min-height: 300px;
-  position: relative;
-  background-color: #002D6A;
-  overflow: hidden; }
-  .footer__decor:before, .footer__decor:after {
-    content: "";
-    position: absolute;
-    left: 55%;
-    min-width: 300vw;
-    min-height: 300vw;
-    background-color: #FFF;
-    animation-name: rotateFooter;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; }
-  .footer__decor:before {
-    bottom: 10vh;
-    border-radius: 48%;
-    animation-duration: 10s; }
-  .footer__decor:after {
-    bottom: 8vh;
-    opacity: .5;
-    border-radius: 60%;
-    animation-duration: 10s; }
-
-@keyframes rotateFooter {
-  0% {
-    transform: translate(-50%, -1%) rotateZ(0deg); }
-  50% {
-    transform: translate(-50%, 0%) rotateZ(180deg); }
-  100% {
-    transform: translate(-50%, -1%) rotateZ(360deg); } }
 .itc-slider {
   position: relative; }
 
@@ -1282,3 +1251,123 @@ select {
 
 .itc-slider__indicator_active {
   background: rgba(255, 255, 255, 0.9); }
+
+.intro:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  min-width: 300vw;
+  min-height: 300vw;
+  background-color: #FFF;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 45%;
+  animation-duration: 20s; }
+.intro:before {
+  bottom: 9vh;
+  border-radius: 48%; }
+.intro:after {
+  bottom: 8vh;
+  opacity: .5;
+  border-radius: 60%; }
+
+.level:before, .level:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  left: 30%;
+  min-width: 200vw;
+  min-height: 400px;
+  background-color: #FDCC00;
+  animation-name: rotateLevel;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate; }
+.level:before {
+  top: 70px;
+  border-radius: 100%;
+  animation-duration: 4s; }
+.level:after {
+  top: 60px;
+  opacity: .5;
+  border-radius: 80%;
+  animation-duration: 3.5s; }
+
+.webinar:before, .webinar:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  min-height: 400px;
+  background-color: #FFB705;
+  animation-name: rotateWebinar;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate; }
+.webinar:before {
+  left: 60%;
+  top: 0;
+  min-width: 200vw;
+  border-radius: 100%;
+  animation-duration: 4s; }
+.webinar:after {
+  left: 50%;
+  top: 0;
+  opacity: 0.5;
+  min-width: 200vw;
+  border-radius: 80%;
+  animation-duration: 3.5s; }
+
+.footer__decor {
+  min-height: 300px;
+  position: relative;
+  background-color: #002D6A;
+  overflow: hidden; }
+  .footer__decor:before, .footer__decor:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    min-width: 300vw;
+    min-height: 300vw;
+    background-color: #FFF;
+    animation-name: rotateFooter;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .footer__decor:before {
+    bottom: 10vh;
+    border-radius: 48%;
+    animation-duration: 10s; }
+  .footer__decor:after {
+    bottom: 8vh;
+    opacity: .5;
+    border-radius: 60%;
+    animation-duration: 10s; }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, 0) rotateZ(0deg); }
+  50% {
+    transform: translate(-50%, -2%) rotateZ(180deg); }
+  100% {
+    transform: translate(-50%, 0%) rotateZ(360deg); } }
+@keyframes rotateLevel {
+  0% {
+    transform: translate(-50%, -1%) rotateZ(3deg); }
+  50% {
+    transform: translate(-50%, 0%) rotateZ(0deg); }
+  100% {
+    transform: translate(-50%, -1%) rotateZ(-3deg); } }
+@keyframes rotateWebinar {
+  0% {
+    transform: translate(-50%, -1%) rotateZ(3deg); }
+  50% {
+    transform: translate(-50%, 0%) rotateZ(0deg); }
+  100% {
+    transform: translate(-50%, -1%) rotateZ(-3deg); } }
+@keyframes rotateFooter {
+  0% {
+    transform: translate(-50%, -1%) rotateZ(0deg); }
+  50% {
+    transform: translate(-50%, 0%) rotateZ(180deg); }
+  100% {
+    transform: translate(-50%, -1%) rotateZ(360deg); } }

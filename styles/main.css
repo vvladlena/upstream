@@ -575,12 +575,16 @@ select {
 
 .teachers {
   background: url("../images/decor/teachers-decor.svg") center center no-repeat;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  height: auto; }
 
 .reviews {
   background: url("../images/background/reviews.png") center center no-repeat;
   background-size: 100% 100%;
-  height: auto; }
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0; }
 
 .questions {
   margin-bottom: 0; }
@@ -982,7 +986,8 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10.625rem 0 3.75rem 0; }
+  padding: 10.625rem 0 3.75rem 0;
+  min-height: 700px; }
 
 .reviews__content {
   display: flex;
@@ -1267,10 +1272,6 @@ select {
 .intro:before {
   bottom: 9vh;
   border-radius: 48%; }
-.intro:after {
-  bottom: 8vh;
-  opacity: .5;
-  border-radius: 60%; }
 
 .level:before, .level:after {
   z-index: -1;
@@ -1295,28 +1296,43 @@ select {
   animation-duration: 3.5s; }
 
 .webinar:before, .webinar:after {
-  z-index: -1;
   content: "";
   position: absolute;
-  min-height: 400px;
-  background-color: #FFB705;
-  animation-name: rotateWebinar;
+  left: 55%;
+  min-width: 400vw;
+  min-height: 400vw;
+  background-color: #FFF;
+  animation-name: rotate;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-direction: alternate; }
+  animation-duration: 10s; }
 .webinar:before {
-  left: 60%;
-  top: 0;
-  min-width: 200vw;
-  border-radius: 100%;
-  animation-duration: 4s; }
+  bottom: 84%;
+  border-radius: 48%; }
 .webinar:after {
-  left: 50%;
-  top: 0;
-  opacity: 0.5;
-  min-width: 200vw;
-  border-radius: 80%;
-  animation-duration: 3.5s; }
+  bottom: 82%;
+  opacity: .5;
+  border-radius: 50%; }
+
+.reviews:before, .reviews:after {
+  content: "";
+  position: absolute;
+  left: 67%;
+  min-width: 300vw;
+  min-height: 300vw;
+  background-color: #FFF;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 45%;
+  animation-duration: 20s; }
+.reviews:before {
+  bottom: 80%;
+  border-radius: 48%; }
+.reviews:after {
+  bottom: 82%;
+  opacity: .5;
+  border-radius: 60%; }
 
 .footer__decor {
   min-height: 300px;
@@ -1351,13 +1367,6 @@ select {
   100% {
     transform: translate(-50%, 0%) rotateZ(360deg); } }
 @keyframes rotateLevel {
-  0% {
-    transform: translate(-50%, -1%) rotateZ(3deg); }
-  50% {
-    transform: translate(-50%, 0%) rotateZ(0deg); }
-  100% {
-    transform: translate(-50%, -1%) rotateZ(-3deg); } }
-@keyframes rotateWebinar {
   0% {
     transform: translate(-50%, -1%) rotateZ(3deg); }
   50% {

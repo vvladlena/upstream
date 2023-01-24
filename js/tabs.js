@@ -36,7 +36,7 @@ class ItcTabs {
       elLinkTarget ? this.show(elLinkTarget) : null;
     };
     _events() {
-      this._elTabs.addEventListener('touchstart', (e) => {
+      this._elTabs.addEventListener('click', (e) => {
         const target = e.target.closest('.tabs__btn');
         if (target) {
           e.preventDefault();

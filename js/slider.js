@@ -52,7 +52,7 @@ class ItcSlider {
     };
 
     this.#config = {
-      loop: true, autoplay: false, interval: 5000, refresh: true, swipe: true, ...config
+       autoplay: false, interval: 5000, refresh: true, swipe: true, ...config
     };
 
     this.#init();

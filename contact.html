@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <link rel="icon" href="./favicon.svg">
+    <title>Upstream - Language school</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="maincontent">
+            <header class="header">
+                <div class="container">
+                    <div class="header__content">
+                        <a href="index.html" class="logo">
+                            <img src="./images/icons/logo.png" alt="" class="logo-img">
+                        </a>
+                        <nav class="menu" role="navigation">
+                            <input class="nav__check" type="checkbox" id="showmenu" />
+                            <label class="nav__showmenu" for="showmenu">&#9776;</label>
+                            <label class="nav__back" for="showmenu"></label>
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Головна</a>
+                                </li>
+                                <li class="menu__item">
+                                    <div class="dropdown">
+                                        <button class="dropbtn"> Курси
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <a href="./general.html">Загальний курс англійської мови</a>
+                                            <a href="./speaking.html">Розмовний курс англійської мови</a>
+                                            <a href="#">Англійська мова з нуля для дорослих</a>
+                                            <a href="#">Курси англійської мови для дітей</a>
+                                            <a href="#">Англійська для тестувальників</a>
+                                            <a href="#">Англійська для переїзду за кордон</a>
+                                            <a href="#">Підготовка до IELTS</a>
+                                            <a href="#">Для корпоративних клієнтів. Курси англійської для бізнесу</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./prices.html" class="menu__link">Ціни</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#gallery" class="menu__link">Блог</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./contact.html" class="menu__link">Контакти</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="tel:+48575900751" class="menu__link">+48 575 900 751</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <select name="countries" id="countries" class="language change-lang">
+                            <option value="pl" selected>PL</option>
+                            <option value="ua">UA</option>
+                        </select>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <section class="section contact">
+                <div class="container">
+                    <div class="contact__content">
+                        <ul class="contact__list">
+                            <li class="contact__item">
+                                <div class="contact__item-name">Телефон</div>
+                                <a href="tel:+48575900751" class="contact__item-link">+48 575 900 751</a>
+                            </li>
+                            <li class="contact__item">
+                                <div class="contact__item-name">Instagram</div>
+                                <a href="https://www.instagram.com/upstream_lingua_/" class="contact__item-link">
+                                    upstream_lingua_
+                                </a>
+                            </li>
+                            <li class="contact__item">
+                                <div class="contact__item-name">Адреса</div>
+                                <div class="contact__item-link">Gdańsk 80-855, Wały Piastowskie, 1, поверх 3, офіс 312
+                                </div>
+                            </li>
+                            <li class="contact__item">
+                                <div class="contact__item-name">Email</div>
+                                <a href="mailto:upstream.lingua@gmail.com" class="contact__item-link">
+                                    upstream.lingua@gmail.com
+                                </a>
+                            </li>
+                            <li class="contact__item">
+                                <div class="contact__item-name">Facebook</div>
+                                <a href="https://m.facebook.com/" class="contact__link">
+                                    mrija.school@gmail.com
+                                </a>
+                            </li>
+                            <li class="contact__item">
+                                <div class="contact__item-name">WhatsApp</div>
+                                <a href="https://wa.me/+48575900751" class="contact__link">
+                                    +48575900751
+                                </a>
+                            </li>
+                        </ul>
+
+                        <form action="send.php" method="post" class="contact__form" id="#form">
+                            <div class="form__title">Якщо у Вас залишились питання - ми з радістю на них відповімо!
+                            </div>
+                            <input class="form__name" type="text" name="username" placeholder="Ім’я" required>
+                            <input type="text" name="email" placeholder="E-mail" required>
+                            <textarea type="text" name="formtext" placeholder="Повідомлення"></textarea>
+                            <div class="form__agree">
+                                <input type="checkbox" id="politics" onclick="check();" value="" autocomplete="off" />
+                                <a href="ссылка на страницу согласия">Висловлюю згоду на використання моїх персональних
+                                    даних.</a>
+                            </div>
+                            <input type="submit" name="submit" class="submit button" disabled="" value="Відправити" />
+                        </form>
+
+                        <div class="contact__map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2324.919114468114!2d18.644485815649976!3d54.35841030612238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd737127f1c78f%3A0x72fedb70b40640db!2sWa%C5%82y%20Piastowskie%201%2C%2080-854%20Gda%C5%84sk!5e0!3m2!1sru!2spl!4v1674758911018!5m2!1sru!2spl"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <script>
+                            function check() {
+                                var submit = document.getElementsByName('submit')[0];
+                                if (document.getElementById('politics').checked)
+                                    submit.disabled = '';
+                                else
+                                    submit.disabled = 'disabled';
+                                submit.classList.toggle('btn-style--default');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <footer class="footer">
+                <div class="footer__decor"></div>
+                <div class="container">
+                    <ul class="footer__list">
+                        <li class="footer__item footer__item-logo">
+                            <a href="index.html" class="logo footer__logo">
+                                <img src="./images/icons/logo.png" alt="logo" class="logo-img">
+                            </a>
+                        </li>
+                        <li class="footer__item footer__item-data">
+
+                            <a href="tel:+48575900751" class="footer__item-text">+48 575 900 751</a>
+                            <div class="footer__item-text">Gdańsk 80-855, Wały Piastowskie 1, поверх 3, офіс 312 </div>
+                        </li>
+                        <li class="footer__item footer__item-data">
+                            <div class="footer__item-text">Олена Колеснікова</div>
+                            <div class="footer__item-text">NIP: 5833466096</div>
+                            <div class="footer__item-text">REGON: 523883865</div>
+                        </li>
+                        <li class="footer__item footer__item-socials">
+                            <a href="https://www.instagram.com/upstream_lingua_/" class="socials__image">
+                                <img src="./images/icons/instagram.svg" alt="instagram icon" class="socials__image-img">
+                            </a>
+                            <a href="https://t.me/+380958860158" class="socials__image">
+                                <img src="./images/icons/telegram.svg" alt="telegram icon" class="socials__image-img">
+                            </a>
+                            <a href="#" class="socials__image">
+                                <img src="./images/icons/facebook.svg" alt="whatsapp icon" class="socials__image-img">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+
+
+</html>

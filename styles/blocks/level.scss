@@ -2,25 +2,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: rem(200px) 0;
     position: relative;
+    padding-top: 40px;
+    min-height: 700px;
 
     &::after {
         position: absolute;
         content: '';
-        width: 100%;
+        width: 30%;
         height: 100%;
         background-image: url('../images/main/level-image.svg');
         background-repeat: no-repeat;
         background-position: right center;
-        background-size: 30% auto;
+        background-size: 100% auto;
         top: rem(100px);
+        right: 0;
 
         @include tablets {
             content: none;
         }
     }
-
 
     @include phones {
         text-align: center;
@@ -31,9 +32,10 @@
 
 .level__description {
     color: $lightColor;
-    display: flex;
+    // display: flex;
     margin-bottom: rem(40px);
     line-height: 150%;
+    letter-spacing: 1px;
     width: 70%;
 
     @include tablets {
@@ -47,16 +49,16 @@
     }
 }
 
-.level__description-text {
-    margin-right: rem(50px);
-    width: 50%;
+// .level__description-text {
+//     margin-right: rem(50px);
+//     width: 50%;
 
-    @include phones {
-        margin-right: 0;
-        width: 90%;
-        margin-bottom: 20px;
-    }
-}
+//     @include phones {
+//         margin-right: 0;
+//         width: 90%;
+//         margin-bottom: 20px;
+//     }
+// }
 
 .level__buttons {
     display: flex;

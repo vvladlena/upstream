@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: rem(170px) 0 rem(60px) 0;
+    padding: rem(180px) 0 rem(60px) 0;
+    min-height: 700px;
 }
 
 .reviews__content {
@@ -45,7 +46,7 @@
     justify-content: center;
     background: $lightColor;
     border-radius: 12px;
-    border: 10px solid $secondaryColor;
+    border: 3px solid $secondaryColor;
     margin-bottom: rem(40px);
     padding: 40px 50px;
     position: absolute;
@@ -78,7 +79,7 @@
 .interactive-avatar {
     width: rem(60px);
     height: rem(60px);
-    border: rem(6px) solid transparent;
+    border: 3px solid transparent;
     border-radius: 50%;
     overflow: hidden;
     position: relative;

@@ -1,0 +1,122 @@
+.course__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.course__image {
+    min-width: 60%;
+    max-height: 480px;
+    height: 480px;
+    border: 1px solid $darkColor;
+
+    @include tablets{
+        height: 380px;
+        margin-bottom: rem(40px);
+    }
+}
+
+.course__image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.course__main {
+    display: flex;
+    margin-bottom: rem(60px);
+
+    @include tablets{
+        flex-direction: column-reverse;
+    }
+}
+
+.course__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: rem(40px);
+}
+
+.course__title {
+    font-size: rem(24px);
+    line-height: 140%;
+    font-weight: 500;
+    color: $firstColor;
+    margin-bottom: rem(40px);
+}
+
+.course__text {
+    margin-bottom: rem(40px);
+}
+
+.course__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin-bottom: rem(60px);
+
+    @include tablets{
+        max-width: 100%;
+    }
+}
+
+.course__item {
+    margin-bottom: rem(40px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.course__item-name {
+    margin-bottom: rem(20px);
+    font-weight: 500;
+}
+
+.course__item-text {
+    margin-bottom: rem(8px);
+    display: flex;
+}
+
+.course__item-symbol{
+margin-right: 10px;
+}
+
+.course__price-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.course__price-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $firstColor;
+    padding: rem(20px) 0;
+
+    &:last-child {
+        border: 0;
+    }
+}
+.course__price-name{
+    margin-right: 20px;
+}
+.course__price-sum {
+    display: flex;
+    align-items: center;
+}
+
+.course__price-old {
+    margin-right: rem(10px);
+    color: $firstColor;
+    text-decoration: line-through;
+}
+
+.course__price-new {
+    color: $thirdColor;
+    font-size: 18px;
+    font-weight: 500;
+}

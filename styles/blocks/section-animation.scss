@@ -1,0 +1,194 @@
+.intro {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        min-width: 300vw;
+        min-height: 300vw;
+        background-color: #FFF;
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        border-radius: 45%;
+        animation-duration: 20s;
+    }
+
+    &:before {
+        bottom: 9vh;
+        border-radius: 48%;
+    }
+
+}
+
+
+.level {
+    &::before {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        background: url('../images/background/level-yellow.png') center center no-repeat;
+        width: 100%;
+        height: 94%;
+        background-size: 100% 100%;
+        top: 6%;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #FFF;
+        z-index: -1;
+    }
+}
+
+
+.animation.level {
+    &::after {
+        animation: toRight 2s .5s ease 1 forwards;
+    }
+}
+
+.webinar {
+    &::before {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        background: url('../images/background/webinar-yellow.png') top center no-repeat;
+        width: 100%;
+        height: 26%;
+        background-size: 100% 100%;
+        top: 0;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #FFF;
+        z-index: -1;
+        top: 0;
+    }
+
+}
+
+
+.animation.webinar {
+    &::after {
+        animation: toRight 2s .5s ease 1 forwards;
+    }
+}
+
+.reviews {
+    &::before {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        background: url('../images/background/reviews-yellow.png') top center no-repeat;
+        width: 100%;
+        height: 37%;
+        background-size: 100% 100%;
+        top: -4px;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #FFF;
+        z-index: -1;
+    }
+}
+
+
+.animation.reviews {
+    &::after {
+        animation: toRight 2s .5s ease 1 forwards;
+    }
+}
+
+
+.footer__decor {
+    min-height: 300px;
+    position: relative;
+    background-color: $firstColor;
+    overflow: hidden;
+
+    @include tablets {
+        min-height: 190px;
+    }
+
+    @include phones {
+        min-height: 150px;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 54%;
+        min-width: 300vw;
+        min-height: 300vw;
+        background-color: #FFF;
+        animation-name: rotateFooter;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    &:before {
+        bottom: 10vh;
+        border-radius: 48%;
+        animation-duration: 10s;
+    }
+
+    &:after {
+        bottom: 8vh;
+        opacity: .5;
+        border-radius: 60%;
+        animation-duration: 10s;
+    }
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, 0) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translate(-50%, -2%) rotateZ(180deg);
+    }
+
+    100% {
+        transform: translate(-50%, 0%) rotateZ(360deg);
+    }
+}
+
+
+
+@keyframes rotateFooter {
+    0% {
+        transform: translate(-50%, -1%) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translate(-50%, 0%) rotateZ(180deg);
+    }
+
+    100% {
+        transform: translate(-50%, -1%) rotateZ(360deg);
+    }
+}
+
+@keyframes toRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}

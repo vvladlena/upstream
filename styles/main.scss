@@ -24,6 +24,7 @@ $phones: 480px;
 
 @import "layout/base";
 @import "blocks/menu";
+@import "blocks/dropdown";
 @import "blocks/logo";
 @import "blocks/button";
 @import "blocks/header";
@@ -39,4 +40,8 @@ $phones: 480px;
 @import "blocks/footer";
 @import "blocks/tabs";
 @import "blocks/slider";
+@import "blocks/section-animation";
+@import "blocks/course";
+@import "blocks/prices";
+@import "blocks/contact";
 

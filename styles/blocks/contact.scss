@@ -1,0 +1,77 @@
+.contact__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(40px);
+}
+
+.contact__item {
+    width: 33%;
+    margin-bottom: rem(40px);
+    padding-right: rem(20px);
+
+    @include tablets {
+        width: 50%;
+    }
+}
+
+.contact__item-name {
+    font-weight: 500;
+}
+
+
+.contact__form {
+    width: 70%;
+
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.contact__form {
+    margin-bottom: rem(40px);
+}
+
+.form__title {
+    margin-bottom: rem(20px);
+    font-weight: 500;
+
+}
+
+input[type="text"],
+textarea {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $firstColor;
+    margin-bottom: rem(20px);
+    width: 47%;
+    height: 30px;
+    font-family: $baseFontFamily;
+
+    &:focus {
+        border-bottom: 1px solid $thirdColor;
+    }
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+.form__name {
+    margin-right: 5%;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+.form__agree {
+    display: flex;
+    margin-bottom: rem(20px);
+
+}

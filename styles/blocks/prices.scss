@@ -1,0 +1,76 @@
+.prices__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.prices__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(50px);
+}
+
+.prices__item {
+    display: flex;
+    border-bottom: 1px solid $firstColor;
+    padding: rem(40px) 0;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.prices__item-title {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 5%;
+
+    @include phones {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.prices__name {
+    font-weight: 500;
+    color: $firstColor;
+    margin-bottom: rem(20px);
+    font-size: 18px;
+
+    @include phones{
+        text-align: center;
+
+    }
+}
+
+.prices__money-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.prices__money-item {
+    display: flex;
+    margin-bottom: rem(20px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.prices__people {
+    width: 30%;
+    margin-right: 10%;
+}
+
+.prices__bottom {
+    width: 70%;
+
+    @include phones{
+        width: 100%;
+    }
+}

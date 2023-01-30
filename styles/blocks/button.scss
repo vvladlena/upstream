@@ -10,10 +10,7 @@
     border: 1px solid $darkColor;
     font-weight: 500;
 
-    &:hover {
-        background-color: $thirdColor;
-        color: $firstColor;
-    }
+  
 
     &__name {
         margin-right: 10%;
@@ -37,16 +34,29 @@
 .btn-style--default {
     background-color: $secondaryColor;
     color: $firstColor;
+    &:hover {
+        background-color: $thirdColor;
+        color: $firstColor;
+    }
+   
 }
 
 .btn-style--light {
     background-color: $lightColor;
     color: $darkColor;
+    &:hover {
+        background-color: $thirdColor;
+        color: $firstColor;
+    }
 }
 
 .btn-style--dark {
     background-color: $firstColor;
     color: $lightColor;
+    &:hover {
+        background-color: $thirdColor;
+        color: $firstColor;
+    }
 
     .button__image {
         background: url('../images/icons/button-arrow-light.svg') center center no-repeat;

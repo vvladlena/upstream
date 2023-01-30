@@ -1,68 +1,46 @@
 .section {
     display: flex;
     flex-direction: column;
-    margin-bottom: rem(70px);
+    margin-bottom: rem(90px);
+    align-items: center;
+    justify-content: center;
 }
 
 .intro {
     position: relative;
-    min-height: rem(700px);
+    min-height: rem(650px);
     background-color: $firstColor;
     overflow: hidden;
     margin-bottom: 0;
+    justify-content: start;
 
     @include phones {
         min-height: 100vh;
     }
 
-    &:before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        min-width: 300vw;
-        min-height: 300vw;
-        background-color: #FFF;
-        animation-name: rotate;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        bottom: 15vh;
-        border-radius: 45%;
-        animation-duration: 10s;
-    }
 }
-
-@keyframes rotate {
-    0% {
-        transform: translate(-50%, 0) rotateZ(0deg);
-    }
-
-    50% {
-        transform: translate(-50%, -2%) rotateZ(180deg);
-    }
-
-    100% {
-        transform: translate(-50%, 0%) rotateZ(360deg);
-    }
-}
-
-
-
 
 .about {
     background: $firstColor;
     height: auto;
     position: relative;
-    padding: 30px 0;
-margin-bottom: 200px;
+    padding-bottom: 30px;
+    margin-bottom: 200px;
 
     &:after {
         position: absolute;
         content: '';
         background: url('../images/background/about.png') bottom center no-repeat;
         background-size: 100% 100%;
-        width: 100%;
+        width: 110%;
         height: 100%;
         top: 50%;
+
+
+        @include tablets {
+            width: 120%;
+            height: 90%;
+        }
     }
 
 
@@ -71,13 +49,18 @@ margin-bottom: 200px;
 .courses {
     background: url('../images/decor/courses-decor.svg') center center no-repeat;
     background-size: 100% 100%;
+    height: auto;
+
 }
 
 .level {
-    background: url('../images/background/level.png') center center no-repeat;
-    background-size: 100% 100%;
+    background: url('../images/background/level.png') bottom center no-repeat;
+    background-size: 100% 90%;
     height: auto;
+    position: relative;
 }
+
+
 
 .video {
     background: url('../images/decor/video-decor.svg') center top no-repeat;
@@ -88,18 +71,21 @@ margin-bottom: 200px;
     background: url('../images/background/webinar.png') center center no-repeat;
     background-size: 100% 100%;
     height: auto;
-
+    position: relative;
 }
 
 .teachers {
     background: url('../images/decor/teachers-decor.svg') center center no-repeat;
     background-size: 100% 100%;
+    height: auto;
+
 }
 
 .reviews {
     background: url('../images/background/reviews.png') center center no-repeat;
     background-size: 100% 100%;
     height: auto;
+    position: relative;
 }
 
 .questions {

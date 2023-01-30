@@ -2,34 +2,34 @@
 // ф-ция открытия
 const openItem = item => {
 
-    const container = item.closest('.team__item');
-    const contentBlock = container.find('.member__description');
-    const textBlock = contentBlock.find('.member__description-block');
+    const container = item.closest('.questions__item');
+    const contentBlock = container.find('.question__description');
+    const textBlock = contentBlock.find('.question__description-block');
     const reqHight = textBlock.height();
 
-    container.addClass('member_active')
+    container.addClass('question--active')
     contentBlock.height(reqHight);
 
 };
 
 //закрыть все открытые
 const closeEveryItem = container => {
-    const items = container.find('.member__description');
-    const itemContainer = container.find('.team__item');
+    const items = container.find('.question__description');
+    const itemContainer = container.find('.questions__item');
 
 
-    itemContainer.removeClass('member_active');
+    itemContainer.removeClass('question--active');
     items.height(0);
 };
 
-$('.member__link').click(e => {
+$('.question__title').click(e => {
     e.preventDefault();
 
     const $this = $(e.currentTarget);
-    const container = $this.closest('.team__list');//передаем при вызове ф-ции зкрытия, ищем все блоки в списке
-    const elemContainer = $this.closest('.team__item');
+    const container = $this.closest('.questions__list');//передаем при вызове ф-ции зкрытия, ищем все блоки в списке
+    const elemContainer = $this.closest('.questions__item');
 
-    if (elemContainer.hasClass('member_active')) {
+    if (elemContainer.hasClass('question--active')) {
         closeEveryItem(container);
     } else {
         closeEveryItem(container);

@@ -7,12 +7,13 @@
 .footer__logo {
     background: $lightColor;
     border-radius: 100%;
-    width: 100px;
-    height: 100px;
+    padding: rem(20px);
 
     @include phones {
-        max-width: 45px;
-        max-height: 45px;
+        max-width: 50px;
+        max-height: 50px;
+        padding: 8px;
+
     }
 }
 
@@ -28,13 +29,6 @@
 
 }
 
-// .footer__item {
-//     margin-right: rem(40px);
-
-//     &:last-child {
-//         margin-right: 0;
-//     }
-// }
 
 .footer__item-logo {
     @include phones {
@@ -62,12 +56,18 @@
 .socials__image {
     margin-bottom: 10px;
 
+
     &:last-child {
         margin-bottom: 0;
     }
 
     @include phones {
         margin-bottom: 0;
+        margin-right: 8px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
@@ -79,54 +79,6 @@
         order: 2;
         align-items: center;
         justify-content: center;
-    }
-}
 
-
-
-.footer__decor {
-    min-height: 300px;
-    position: relative;
-    background-color: $firstColor;
-    overflow: hidden;
-
-    &:before,
-    &:after {
-        content: "";
-        position: absolute;
-        left: 55%;
-        min-width: 300vw;
-        min-height: 300vw;
-        background-color: #FFF;
-        animation-name: rotateFooter;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-
-    &:before {
-        bottom: 10vh;
-        border-radius: 48%;
-        animation-duration: 10s;
-    }
-
-    &:after {
-        bottom: 8vh;
-        opacity: .5;
-        border-radius: 60%;
-        animation-duration: 10s;
-    }
-}
-
-@keyframes rotateFooter {
-    0% {
-        transform: translate(-50%, -1%) rotateZ(0deg);
-    }
-
-    50% {
-        transform: translate(-50%, 0%) rotateZ(180deg);
-    }
-
-    100% {
-        transform: translate(-50%, -1%) rotateZ(360deg);
     }
 }

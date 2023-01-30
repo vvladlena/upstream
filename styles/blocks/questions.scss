@@ -5,6 +5,10 @@
 
 .question {
     margin-bottom: rem(20px);
+
+    .question__symbol-open {
+        display: none;
+    }
 }
 
 .question__title {
@@ -17,6 +21,16 @@
     font-size: rem(24px);
     font-weight: 500;
     border-radius: 12px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.question__subtitle {
+    font-size: rem(20px);
+    margin-bottom: rem(30px);
+    font-weight: 500;
 }
 
 .question__title-text {
@@ -24,21 +38,33 @@
 }
 
 .question__description {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s;
+    margin-bottom: 20px;
+}
+
+.question__description-block {
+    height: auto;
     padding: rem(30px) rem(40px);
 }
 
 .question__text {
-    margin-bottom: rem(40px);
-
-    &:last-child{
-        margin-bottom: 0;
-    }
+    margin-bottom: rem(30px);
 }
 
 .question--active {
     .question__title {
         background: $secondaryColor;
         color: $darkColor;
-
     }
+
+    .question__symbol-close {
+        display: none;
+    }
+
+    .question__symbol-open {
+        display: block;
+    }
+
 }

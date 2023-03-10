@@ -1,0 +1,39 @@
+
+
+  .prices-tabs>input[type="radio"] {
+    display: none;
+  }
+
+  .prices-tabs .prices__list {
+    /* скрыть контент по умолчанию */
+    display: none;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+  #tab-btn-1:checked~#content-1,
+  #tab-btn-2:checked~#content-2{
+    display: flex;
+  }
+
+  .prices-tabs label {
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+    padding: 2px 15px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+  }
+
+  .prices-tabs label:not(:first-of-type) {
+    border-left: none;
+  }
+
+  .prices-tabs>input[type="radio"]:checked+label {
+    border-bottom: 1px solid $firstColor;
+    color: $firstColor;
+  }

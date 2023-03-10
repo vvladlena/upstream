@@ -10,7 +10,7 @@
     height: 480px;
     border: 1px solid $darkColor;
 
-    @include tablets{
+    @include tablets {
         height: 380px;
         margin-bottom: rem(40px);
     }
@@ -27,7 +27,7 @@
     display: flex;
     margin-bottom: rem(60px);
 
-    @include tablets{
+    @include tablets {
         flex-direction: column-reverse;
     }
 }
@@ -37,6 +37,10 @@
     flex-direction: column;
     justify-content: space-between;
     margin-right: rem(40px);
+
+    @include phones{
+        margin-right: 0;
+    }
 }
 
 .course__title {
@@ -57,7 +61,7 @@
     max-width: 60%;
     margin-bottom: rem(60px);
 
-    @include tablets{
+    @include tablets {
         max-width: 100%;
     }
 }
@@ -73,6 +77,8 @@
 .course__item-name {
     margin-bottom: rem(20px);
     font-weight: 500;
+    text-decoration: underline 5px solid $secondaryColor;
+    text-decoration-skip-ink: none;
 }
 
 .course__item-text {
@@ -80,37 +86,21 @@
     display: flex;
 }
 
-.course__item-symbol{
-margin-right: 10px;
+.course__item-symbol {
+    margin-right: 10px;
 }
 
-.course__price-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.course__price-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid $firstColor;
-    padding: rem(20px) 0;
-
-    &:last-child {
-        border: 0;
-    }
-}
-.course__price-name{
+.course__price-name {
     margin-right: 20px;
 }
+
 .course__price-sum {
     display: flex;
     align-items: center;
 }
 
 .course__price-old {
-    margin-right: rem(10px);
+    margin-right: rem(20px);
     color: $firstColor;
     text-decoration: line-through;
 }
@@ -119,4 +109,28 @@ margin-right: 10px;
     color: $thirdColor;
     font-size: 18px;
     font-weight: 500;
+}
+
+.course__buttons {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    
+    .btn-style--light{
+        margin-right: rem(20px);
+        @include phones{
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    @include tablets {
+      width: 100%;
+    }
+
+    @include phones{
+        flex-direction: column;
+    }
+
+    
 }

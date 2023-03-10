@@ -33,14 +33,15 @@
                                         <button class="dropbtn"> Курси
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="./general.html">Загальний курс англійської мови</a>
-                                            <a href="./speaking.html">Розмовний курс англійської мови</a>
-                                            <a href="#">Англійська мова з нуля для дорослих</a>
-                                            <a href="#">Курси англійської мови для дітей</a>
-                                            <a href="#">Англійська для тестувальників</a>
-                                            <a href="#">Англійська для переїзду за кордон</a>
-                                            <a href="#">Підготовка до IELTS</a>
-                                            <a href="#">Для корпоративних клієнтів. Курси англійської для бізнесу</a>
+                                            <a href="./courses/general.html">Загальний курс англійської мови</a>
+                                            <a href="./courses/speaking.html">Розмовний курс англійської мови</a>
+                                            <a href="./courses/adult.html">Англійська мова з нуля для дорослих</a>
+                                            <a href="./courses/kids.html">Курси англійської мови для дітей</a>
+                                            <a href="./courses/testers.html">Англійська для тестувальників</a>
+                                            <a href="./courses/abroad.html">Англійська для переїзду за кордон</a>
+                                            <a href="./courses/ielts.html">Підготовка до IELTS</a>
+                                            <a href="./courses/business.html">Для корпоративних клієнтів. Курси
+                                                англійської для бізнесу</a>
                                         </div>
                                     </div>
                                 </li>
@@ -58,10 +59,18 @@
                                 </li>
                             </ul>
                         </nav>
-                        <select name="countries" id="countries" class="language change-lang">
-                            <option value="pl" selected>PL</option>
-                            <option value="ua">UA</option>
-                        </select>
+                        <ul class="language__list">
+                            <li class="language__item">
+                                <a href="#" class="language__link">
+                                    <img src="./images/icons/ukraine.png" alt="">
+                                </a>
+                            </li>
+                            <li class="language__item">
+                                <a href="#" class="language__link">
+                                    <img src="./images/icons/poland.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -73,44 +82,62 @@
                     <div class="contact__content">
                         <ul class="contact__list">
                             <li class="contact__item">
-                                <div class="contact__item-name">Телефон</div>
+                                <div class="contact__item-content">
+                                    <img class="contact__item-img" src="./images/icons/contact-phone.svg" alt="phone">
+                                    <div class="contact__item-name">Телефон</div>
+                                </div>
                                 <a href="tel:+48575900751" class="contact__item-link">+48 575 900 751</a>
                             </li>
                             <li class="contact__item">
-                                <div class="contact__item-name">Instagram</div>
+                                <div class="contact__item-content">
+                                    <img class="contact__item-img" src="./images/icons/contact-instagram.svg" alt="instagram">
+                                    <div class="contact__item-name">Instagram</div>
+                                </div>
                                 <a href="https://www.instagram.com/upstream_lingua_/" class="contact__item-link">
                                     upstream_lingua_
                                 </a>
                             </li>
                             <li class="contact__item">
-                                <div class="contact__item-name">Адреса</div>
+                                <div class="contact__item-content">
+                                    <img class="contact__item-img" src="./images/icons/contact-map.svg" alt="map">
+                                    <div class="contact__item-name">Адреса</div>
+                                </div>
                                 <div class="contact__item-link">Gdańsk 80-855, Wały Piastowskie, 1, поверх 3, офіс 312
                                 </div>
                             </li>
                             <li class="contact__item">
-                                <div class="contact__item-name">Email</div>
+                                <div class="contact__item-content">
+                                    <img class="contact__item-img" src="./images/icons/contact-email.svg" alt="email">
+                                    <div class="contact__item-name">Email</div>
+                                </div>
                                 <a href="mailto:upstream.lingua@gmail.com" class="contact__item-link">
                                     upstream.lingua@gmail.com
                                 </a>
                             </li>
                             <li class="contact__item">
-                                <div class="contact__item-name">Facebook</div>
+                                <div class="contact__item-content">
+                                    <img class="contact__item-img" src="./images/icons/contact-facebook.svg" alt="facebook">
+                                    <div class="contact__item-name">Facebook</div>
+                                </div>
                                 <a href="https://m.facebook.com/" class="contact__link">
                                     mrija.school@gmail.com
                                 </a>
                             </li>
                             <li class="contact__item">
-                                <div class="contact__item-name">WhatsApp</div>
+                                <div class="contact__item-content">
+                                    <img class="contact__item-img" src="./images/icons/contact-whatsapp.svg" alt="whatsapp">
+                                    <div class="contact__item-name">WhatsApp</div>
+                                </div>
                                 <a href="https://wa.me/+48575900751" class="contact__link">
                                     +48575900751
                                 </a>
                             </li>
                         </ul>
 
-                        <form action="send.php" method="post" class="contact__form" id="#form">
+                        <form action="send.php" method="post" class="contact__form ajax-contact-form" id="#form">
                             <div class="form__title">Якщо у Вас залишились питання - ми з радістю на них відповімо!
                             </div>
-                            <input class="form__name" type="text" name="username" placeholder="Ім’я" required>
+                            <input class="form__name" type="text" name="name" placeholder="Ім’я" required>
                             <input type="text" name="email" placeholder="E-mail" required>
                             <textarea type="text" name="formtext" placeholder="Повідомлення"></textarea>
                             <div class="form__agree">
@@ -179,6 +206,8 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/callOrder.js"></script>
+
 </body>
 
 

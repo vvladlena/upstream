@@ -18,6 +18,13 @@
         width: 50%;
     }
 }
+.contact__item-content {
+    display: flex;
+}
+
+.contact__item-img{
+    margin-right: 5px;
+}
 
 .contact__item-name {
     font-weight: 500;

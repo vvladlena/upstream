@@ -49,14 +49,15 @@
                                         <button class="dropbtn"> Курси
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="./general.html">Загальний курс англійської мови</a>
-                                            <a href="./speaking.html">Розмовний курс англійської мови</a>
-                                            <a href="#">Англійська мова з нуля для дорослих</a>
-                                            <a href="#">Курси англійської мови для дітей</a>
-                                            <a href="#">Англійська для тестувальників</a>
-                                            <a href="#">Англійська для переїзду за кордон</a>
-                                            <a href="#">Підготовка до IELTS</a>
-                                            <a href="#">Для корпоративних клієнтів. Курси англійської для бізнесу</a>
+                                            <a href="./courses/general.html">Загальний курс англійської мови</a>
+                                            <a href="./courses/speaking.html">Розмовний курс англійської мови</a>
+                                            <a href="./courses/adult.html">Англійська мова з нуля для дорослих</a>
+                                            <a href="./courses/kids.html">Курси англійської мови для дітей</a>
+                                            <a href="./courses/testers.html">Англійська для тестувальників</a>
+                                            <a href="./courses/abroad.html">Англійська для переїзду за кордон</a>
+                                            <a href="./courses/ielts.html">Підготовка до IELTS</a>
+                                            <a href="./courses/business.html">Для корпоративних клієнтів. Курси
+                                                англійської для бізнесу</a>
                                         </div>
                                     </div>
                                 </li>
@@ -75,10 +76,18 @@
                             </ul>
                         </nav>
 
-                        <select name="countries" id="countries" class="language change-lang">
-                            <option value="pl" selected>PL</option>
-                            <option value="ua">UA</option>
-                        </select>
+                        <ul class="language__list">
+                            <li class="language__item">
+                                <a href="#" class="language__link">
+                                    <img src="./images/icons/ukraine.png" alt="">
+                                </a>
+                            </li>
+                            <li class="language__item">
+                                <a href="#" class="language__link">
+                                    <img src="./images/icons/poland.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -91,13 +100,14 @@
                         <div class="intro__inner">
                             <h1 class="intro__header">Upstream</h1>
                             <h2 class="intro__title">Language school</h2>
-                            <div class="intro__description">Get your superpower here!</div>
+                            <div class="intro__description">Тут знайдеш свою суперсилу!</div>
                             <div class="intro__buttons">
-                                <a href="./contact.html" class="button  btn-style--default">
+                                <a href="./contact.html" target="_blank" class="button  btn-style--default">
                                     <div class="button__name">Записатись на курс</div>
                                     <div class="button__image"></div>
                                 </a>
-                                <a href="#" class="button btn-style--light">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2j1eBzukFTkbNxUu2GZMUz6pygs-UZ5QksUXUjKmX_iCufw/viewform"
+                                    target="_blank" class="button btn-style--light">
                                     <div class="button__name">Пройти тест</div>
                                     <div class="button__image"></div>
                                 </a>
@@ -117,7 +127,7 @@
                         <h2 class="about__title title-style title-style--light">Про нас</h2>
                         <ul class="about__list">
                             <li class="about__item">
-                                <img src="./images/icons/modern.png" alt="phone" class="about__image">
+                                <img src="./images/icons/modern.png" alt="modern" class="about__image">
                                 <div class="about__text">
                                     <div class="about__name">СУЧАСНО</div>
                                     <div class="about__description">Більше ніяких «Лондон із зе кепітал...» – тільки
@@ -126,7 +136,7 @@
                                 </div>
                             </li>
                             <li class="about__item">
-                                <img src="./images/icons/globe.png" alt="globe" class="about__image">
+                                <img src="./images/icons/comfort.png" alt="comfort" class="about__image">
                                 <div class="about__text">
                                     <div class="about__name">КОМФОРТНО</div>
                                     <div class="about__description">Навчайся в наших класах, або з будь-якої точки світу
@@ -135,7 +145,7 @@
                                 </div>
                             </li>
                             <li class="about__item">
-                                <img src="./images/icons/class.png" alt="class" class="about__image">
+                                <img src="./images/icons/practical.png" alt="practical" class="about__image">
                                 <div class="about__text">
                                     <div class="about__name">ПРАКТИЧНО</div>
                                     <div class="about__description">Безкоштовне пробне заняття. Комфортні міні-групи із
@@ -167,25 +177,44 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин -
-                                                                триває одна зустріч </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців -
-                                                                тривалість курсу</li>
-                                                            <li class="card__description-item">&#10004 Заняття проходять
-                                                                в класах нашої школи або онлайн, на платформі Zoom</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="./general.html" class="button btn-style--light">
+                                                        <a href="./general.html" target="_blank"
+                                                            class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -197,25 +226,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин -
-                                                                триває одна зустріч </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців -
-                                                                тривалість курсу</li>
-                                                            <li class="card__description-item">&#10004 Заняття проходять
-                                                                в класах нашої школи або онлайн, на платформі Zoom</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">440 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -227,25 +274,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин -
-                                                                триває одна зустріч </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців -
-                                                                тривалість курсу</li>
-                                                            <li class="card__description-item">&#10004 Заняття проходять
-                                                                в класах нашої школи або онлайн, на платформі Zoom</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -257,25 +322,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин -
-                                                                триває одна зустріч </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців -
-                                                                тривалість курсу</li>
-                                                            <li class="card__description-item">&#10004 Заняття проходять
-                                                                в класах нашої школи або онлайн, на платформі Zoom</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -287,22 +370,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців (один
-                                                                рівень)</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -314,25 +418,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин -
-                                                                триває одна зустріч </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців -
-                                                                тривалість курсу</li>
-                                                            <li class="card__description-item">&#10004 Заняття проходять
-                                                                в класах нашої школи або онлайн, на платформі Zoom</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -343,54 +465,91 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин -
-                                                                триває одна зустріч </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців -
-                                                                тривалість курсу</li>
-                                                            <li class="card__description-item">&#10004 Заняття проходять
-                                                                в класах нашої школи або онлайн, на платформі Zoom</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="itc-slider__item card">
-                                                    <div class="card__name">Для корпоративних клієнтів. Курси англійської для бізнесу</div>
+                                                    <div class="card__name">Для корпоративних клієнтів. Курси
+                                                        англійської для бізнесу</div>
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин -
-                                                                триває одна зустріч </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців -
-                                                                тривалість курсу</li>
-                                                            <li class="card__description-item">&#10004 Заняття проходять
-                                                                в класах нашої школи або онлайн, на платформі Zoom</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -413,22 +572,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців (один
-                                                                рівень)</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -440,22 +620,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців (один
-                                                                рівень)</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -467,22 +668,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців (один
-                                                                рівень)</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -494,22 +716,43 @@
                                                     <div class="card__description">
                                                         <div class="card__description-title"> Що на вас чекає:</div>
                                                         <ul class="card__description-list">
-                                                            <li class="card__description-item">&#10004 2 заняття на
-                                                                тиждень</li>
-                                                            <li class="card__description-item">&#10004 80 хвилин </li>
-                                                            <li class="card__description-item">&#10004 4-6 осіб у групі
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">2 заняття на тиждень
+                                                                </div>
                                                             </li>
-                                                            <li class="card__description-item">&#10004 8 місяців (один
-                                                                рівень)</li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">80 хвилин -
+                                                                    триває одна зустріч </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">4-6 осіб у групі
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">8 місяців -
+                                                                    тривалість курсу
+                                                                </div>
+                                                            </li>
+                                                            <li class="card__description-item">
+                                                                <div class="card__description-symbol">&#10004</div>
+                                                                <div class="card__description-text">Заняття проходять
+                                                                    в класах нашої школи або онлайн, на платформі Zoom
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div class="card__price">400 зл/міс</div>
                                                     <div class="card__buttons">
-                                                        <a href="#" class="button btn-style--light">
+                                                        <a href="#" target="_blank" class="button btn-style--light">
                                                             <div class="button__name">Детальніше</div>
                                                             <div class="button__image"></div>
                                                         </a>
-                                                        <a href="./contact.html" class="button btn-style--default">
+                                                        <a href="./contact.html" target="_blank"
+                                                            class="button btn-style--default">
                                                             <div class="button__name">Записатись на курс </div>
                                                             <div class="button__image"></div>
                                                         </a>
@@ -535,19 +778,16 @@
                     <div class="level__inner">
                         <h2 class="level__title title-style title-style--light">Як дізнатись свій рівень мови? </h2>
                         <div class="level__description">
-                            <!-- <div class="level__description-text">Для того, щоб вибрати потрібний курс навчання, Вам
-                                потрібно визначити свій ріверь мови. З нами Ви можете зробити це безкоштовно. </div>
-                            <div class="level__description-text">Дізнатися свій рівень мови Ви можете просто пройшовши
-                                тестування у нас на сайті.</div> -->
                             Для того, щоб вибрати потрібний курс англійської мови, Вам потрібно визначити свій рівень
                             мови. З нами Ви можете зробити це безкоштовно.
                         </div>
                         <div class="level__buttons">
-                            <a href="#" class="button btn-style--default">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2j1eBzukFTkbNxUu2GZMUz6pygs-UZ5QksUXUjKmX_iCufw/viewform"
+                                target="_blank" class="button btn-style--default">
                                 <div class="button__name">Пройти тест</div>
                                 <div class="button__image"></div>
                             </a>
-                            <a href="#" class="button btn-style--light">
+                            <a href="#" target="_blank" class="button btn-style--light">
                                 <div class="button__name">Рівні англійської</div>
                                 <div class="button__image"></div>
                             </a>
@@ -566,10 +806,14 @@
                             Навчання в комфортних міні-групах по 4-6 чоловік, а також в парах, як найкраще підходить для
                             відпрацювання спілкування, має спланований темп і систему, а також підтримує мотивацію.
                         </div>
-                        <video loop autoplay controls muted poster="./images/main/video-poster.png" class="video__file">
-                            <source src="./videos/intro.mp4" type="video/mp4">
-                        </video>
-                        <a href="#" class="button btn-style--default">
+                        <div class="video__content">
+                            <iframe class="video__file" src="https://www.youtube.com/embed/4oIlS5jZDsc"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <a href="#" target="_blank" class="button btn-style--default">
                             <div class="button__name">Записатись на курс</div>
                             <div class="button__image"></div>
                         </a>
@@ -584,7 +828,8 @@
                         <h2 class="webinar__title title-style title-style--light">Запрошуємо на наш вебінар! </h2>
                         <div class="webinar__description">Для того, щоб вибрати потрібний курс навчання, Вам потрібно
                             визначити свій ріверь мови. З нами Ви можете зробити це безкоштовно.</div>
-                        <a href="https://www.elena-kolesnikova.com/webinar" class="button btn-style--default">
+                        <a href="https://www.elena-kolesnikova.com/webinar" target="_blank"
+                            class="button btn-style--default">
                             <div class="button__name">Перейти</div>
                             <div class="button__image"></div>
                         </a>
@@ -599,63 +844,165 @@
                         <h2 class="cards__title title-style">Наші викладачі</h2>
 
                         <div class="itc-slider itc-slider-3" data-slider="itc-slider">
-                            <div class="itc-slider__wrapper">
-                                <div class="itc-slider__items">
-                                    <div class="itc-slider__item card card_teacher">
+                            <div class="itc-slider__wrapper ">
+                                <ul class="itc-slider__items">
+                                    <li class="itc-slider__item card card_teacher">
                                         <div class="card__name">Олена Колеснікова</div>
                                         <div class="card__image">
                                             <img src="./images/main/teacher-1.jpg" alt="english teacher"
                                                 class="card__image-img">
                                         </div>
-                                        <div class="card__description">
-                                            &#8226 Викладач англійської мови, лінгвіст, перекладач <br>
-                                            &#8226 Досвід викладання понад 20 років. Онлайн – 6 років <br>
-                                            &#8226 5 міжнародних сертифікатів <br>
-                                            &#8226 1000+ задоволених студентів із різних країн <br>
-                                            &#8226 Автор курсів, навчальних матеріалів та марафонів <br>
-                                            &#8226 Викладає General English, Business English, English for IT <br>
-                                            &#8226 Готує до таких іспитів як ZNO, Matura, FCE, IELTS <br>
-                                        </div>
-                                    </div>
-                                    <div class="itc-slider__item card card_teacher">
+                                        <div class="card__description-title">Викладач англійської</div>
+                                        <ul class="card__description-list">
+                                            <li class="card__description-item">
+                                                <div class="card__description-symbol">&#8226</div>
+                                                <div class="card__description-text">Викладач англійської мови,
+                                                    лінгвіст, перекладач
+                                                </div>
+                                            </li>
+                                            <li class="card__description-item">
+                                                <div class="card__description-symbol">&#8226</div>
+                                                <div class="card__description-text">Досвід викладання понад 20 років.</div>
+                                            </li>
+                                            <li class="card__description-item">
+                                                <div class="card__description-symbol">&#8226</div>
+                                                <div class="card__description-text">5 міжнародних сертифікатів
+                                                </div>
+                                            </li>
+                                            <li class="card__description-item">
+                                                <div class="card__description-symbol">&#8226</div>
+                                                <div class="card__description-text">1000+ задоволених студентів із
+                                                    різних країн
+                                                </div>
+                                            </li>
+                                            <li class="card__description-item">
+                                                <div class="card__description-symbol">&#8226</div>
+                                                <div class="card__description-text">Автор курсів, навчальних
+                                                    матеріалів та марафонів
+                                                </div>
+                                            </li>
+                                        </ul>
+
+
+                                    </li>
+                                    <li class="itc-slider__item card card_teacher">
                                         <div class="card__name">Викладач номер два</div>
                                         <div class="card__image">
                                             <img src="./images/main/teacher-1.jpg" alt="english teacher"
                                                 class="card__image-img">
                                         </div>
-                                        <div class="card__description"> &#8226 10 років викладацького досвіду <br>
-                                            &#8226 4 роки роботи онлайн <br>
-                                            &#8226 Міжнародні сертифікати: TESOL, IELTS<br>
-                                            &#8226 Автор курсу "Boost your Grammar"<br>
-                                            &#8226 автор навчальних матеріалів, модератор онлайн-курсів<br>
-                                            &#8226 Досвід роботи у Китаї, Європі<br>
-                                            &#8226 Методист<br>
+                                        <div class="card__description">
+                                            <div class="card__description-title">Викладач англійської</div>
+                                            <ul class="card__description-list">
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Викладач англійської мови,
+                                                        лінгвіст, перекладач
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Досвід викладання понад 20 років.</div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">5 міжнародних сертифікатів
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">1000+ задоволених студентів із
+                                                        різних країн
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Автор курсів, навчальних
+                                                        матеріалів та марафонів
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </div>
-                                    <div class="itc-slider__item card card_teacher">
+                                    </li>
+                                    <li class="itc-slider__item card card_teacher">
                                         <div class="card__name">Викладач номер три</div>
                                         <div class="card__image">
                                             <img src="./images/main/teacher-1.jpg" alt="english teacher"
                                                 class="card__image-img">
                                         </div>
-                                        <div class="card__description"> &#8226 15 років викладацького досвіду<br>
-                                            &#8226 6 років в онлайн навчанні<br>
-                                            &#8226 Сертифікований мовний коуч<br>
-                                            &#8226 Автор навчальних матеріалів, модератор онлайн-курсів та педагогічний
-                                            дизайнер<br>
+                                        <div class="card__description">
+                                            <div class="card__description-title">Викладач польської</div>
+                                            <ul class="card__description-list">
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Викладач англійської мови,
+                                                        лінгвіст, перекладач
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Досвід викладання понад 20 років.</div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">5 міжнародних сертифікатів
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">1000+ задоволених студентів із
+                                                        різних країн
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Автор курсів, навчальних
+                                                        матеріалів та марафонів
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </div>
-                                    <div class="itc-slider__item card card_teacher">
+                                    </li>
+                                    <li class="itc-slider__item card card_teacher">
                                         <div class="card__name">Викладач номер чотири</div>
                                         <div class="card__image">
                                             <img src="./images/main/teacher-1.jpg" alt="english teacher"
                                                 class="card__image-img">
                                         </div>
-                                        <div class="card__description"> Засновниця школи. Викладач із 10-річним
-                                            досвідом.
+                                        <div class="card__description">
+                                            <div class="card__description-title">Викладач англійської</div>
+                                            <ul class="card__description-list">
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Викладач англійської мови,
+                                                        лінгвіст, перекладач
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Досвід викладання понад 20 років.</div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">5 міжнародних сертифікатів
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">1000+ задоволених студентів із
+                                                        різних країн
+                                                    </div>
+                                                </li>
+                                                <li class="card__description-item">
+                                                    <div class="card__description-symbol">&#8226</div>
+                                                    <div class="card__description-text">Автор курсів, навчальних
+                                                        матеріалів та марафонів
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
                             <button class="itc-slider__btn itc-slider__btn_prev"></button>
                             <button class="itc-slider__btn itc-slider__btn_next"></button>
@@ -762,17 +1109,17 @@
                         <h2 class="questions__title title-style">Ваші питання</h2>
                         <h3 class="question__subtitle">Ми оперативно вирішимо будь-яке Ваше питання, якщо відповіді на
                             нього ви не знайшли на сторінках сайту</h3>
-                        <ul class="questions__list">
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">
+                        <ul class="acco__list">
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">
                                         За якими методиками ведеться викладання?
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description ">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">
                                             Всі курси англійської мови в нашій школі націлені на розвиток розмовних
                                             навичок. Ми комбінуємо кілька методик у викладанні: комунікативну, лексичний
@@ -792,14 +1139,14 @@
                                 </div>
 
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">Як і коли здійснюється оплата навчання?</div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">Як і коли здійснюється оплата навчання?</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">Після тестування та безкоштовного пробного заняття,
                                             вам надається посилання на оплату, де ви можете сплатити місячний абонемент
                                             або сплатити вибраний курс повністю з 5% знишкою.</li>
@@ -808,15 +1155,15 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">Ви нагадуватимете мені, коли закінчується оплата?
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">Ви нагадуватимете мені, коли закінчується оплата?
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">Ви отримуватимете нагадування на електронну адресу
                                             або будь-який зручний для Вас месенджер. Менеджер також зв’яжеться з вами,
                                             якщо ви не внесете оплату за добу до запланованого заняття.</li>
@@ -824,15 +1171,15 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">Якщо я не можу бути присутнім на уроці, чи
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">Якщо я не можу бути присутнім на уроці, чи
                                         списується оплата?</div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">Наші викладачі — досвідчені кваліфіковані фахівці з
                                             вищою
                                             педагогічною та лінгвістичною освітою. Кваліфікацію викладачів також
@@ -849,17 +1196,17 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">
                                         Якщо я сплатив декілька занять вперед, але не можу продовжити навчання, ви
                                         повернете мені гроші?
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">
                                             У випадку, якщо у вас немає можливості бути присутнім на уроці, будь ласка,
                                             проінформуєте нас за телефоном +48 575 900 751 не пізніше ніж за 24 години
@@ -877,16 +1224,16 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">
                                         Що робити, якщо я пропустив заняття не попереджаючи?
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">
                                             Вартість такого пропущеного заняття не компенсується. Але викладач завжди
                                             надасть Вам запис і усі матеріали заняття, щоб Ви могли повністю
@@ -898,17 +1245,16 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">
+                            <li class="acco__item question">
+                                <a class="acco__title question__title">
+                                    <div class="acco__title-text">
                                         Чи списується оплата під час моїх відпусток або відряджень?
-
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">
                                             Ні, ваш баланс залишається незмінним під час вашої відсутності. Просто
                                             попередьте нас про перерву в навчанні заздалегідь.
@@ -919,17 +1265,17 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">
+                            <li class="acco__item question">
+                                <a class="acco__title question__title">
+                                    <div class="acco__title-text">
                                         Якщо я сплатив декілька зайняття вперед, але не можу продовжити навчання, ви
                                         повернете мені гроші?
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">
                                             Якщо у вас змінилися обставини, і ви не можете продовжувати навчання в
                                             Upstream Language School, вам необхідно проінформувати про це нашого
@@ -942,17 +1288,17 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">
                                         Що робити якщо заняття урвалося через проблеми з інтернетом, електрикою або
                                         інших негараздів?
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">
                                             Не турбуйтеся, у такому разі викладач надасть вам запис і усі матеріали
                                             заняття, щоб ви могли повністю відпрацювати заняття.
@@ -963,16 +1309,16 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">
                                         Мені треба сплатити курс навчання цілком відразу або можна оплачувати частинами?
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">
                                             Ви можете сплатити вартість курсу відразу і отримати 5% знижку або
                                             оплачувати частинами помісячно.
@@ -983,16 +1329,16 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="questions__item question">
-                                <a class="question__title">
-                                    <div class="question__title-text">
+                            <li class="acco__item question">
+                                <a class="acco__title  question__title">
+                                    <div class="acco__title-text">
                                         Як ви забезпечуєте ефективність онлайн/гібридного заняття?
                                     </div>
-                                    <div class="question__symbol-close">+</div>
-                                    <div class="question__symbol-open">-</div>
+                                    <div class="acco__symbol-close">+</div>
+                                    <div class="acco__symbol-open">-</div>
                                 </a>
-                                <div class="question__description">
-                                    <ul class="question__description-block">
+                                <div class="acco__description">
+                                    <ul class="acco__description-block">
                                         <li class="question__text">
                                             Для того, щоб ви могли отримати максимальну користь онлайн навчання - вам
                                             потрібний комп'ютер, ноутбук або планшет. На телефоні теж можна займатися,
@@ -1064,4 +1410,14 @@
 
 
 
+<div id="simplecookienotification_v01" style="display: block; z-index: 99999; min-height: 35px; width: 100%; position: fixed; background: rgb(227, 242, 253); border-image: initial; border-top: 1px solid rgb(30, 136, 229); text-align: center; right: 0px; color: rgb(119, 119, 119); bottom: 0px; left: 0px; border-right-color: rgb(30, 136, 229); border-bottom-color: rgb(30, 136, 229); border-left-color: rgb(30, 136, 229);">
+    <div style="padding:10px; margin-left:15px; margin-right:15px; font-size:14px; font-weight:normal;">
+    <span id="simplecookienotification_v01_powiadomienie">Nasze strony wykorzystują pliki cookies.</span><span id="br_pc_title_html"> &nbsp;&nbsp; </span>
+    <a id="simplecookienotification_v01_polityka" href="" style="color: rgb(30, 136, 229);"></a><span id="br_pc2_title_html"> &nbsp;&nbsp; </span>
+    <a id="simplecookienotification_v01_info" href="" style="color: rgb(30, 136, 229);"></a><span id="br_pc3_title_html"> &nbsp;&nbsp; </span>
+    <a id="simplecookienotification_v01_info2" href="" style="color: rgb(30, 136, 229);"></a><div id="jwc_hr1" style="height: 10px; display: none;"></div>
+    <a id="okbutton" href="javascript:simplecookienotification_v01_create_cookie('simplecookienotification_v01',1,7);" style="position: absolute; background: rgb(30, 136, 229); color: rgb(255, 255, 255); padding: 5px 15px; text-decoration: none; font-size: 12px; font-weight: normal; border: 0px solid rgb(227, 242, 253); border-radius: 0px; top: 5px; right: 5px;">AKCEPTUJĘ</a><div id="jwc_hr2" style="height: 10px; display: none;"></div>
+    </div>
+    </div>
+    <script type="text/javascript">var galTable= new Array(); var galx = 0;</script><script type="text/javascript">function simplecookienotification_v01_create_cookie(name,value,days) { if (days) { var date = new Date(); date.setTime(date.getTime()+(days*24*60*60*1000)); var expires = "; expires="+date.toGMTString(); } else var expires = ""; document.cookie = name+"="+value+expires+"; path=/"; document.getElementById("simplecookienotification_v01").style.display = "none"; } function simplecookienotification_v01_read_cookie(name) { var nameEQ = name + "="; var ca = document.cookie.split(";"); for(var i=0;i < ca.length;i++) { var c = ca[i]; while (c.charAt(0)==" ") c = c.substring(1,c.length); if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length); }return null;}var simplecookienotification_v01_jest = simplecookienotification_v01_read_cookie("simplecookienotification_v01");if(simplecookienotification_v01_jest==1){ document.getElementById("simplecookienotification_v01").style.display = "none"; }</script>
 </html>

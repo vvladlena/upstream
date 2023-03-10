@@ -30,7 +30,9 @@
 }
 
 .menu__item {
-    margin-right: rem(50px);
+    margin-right: 30px;
+    font-weight: 500;
+    font-size: 18px;
 
     @include tablets {
         margin-right: 0;
@@ -43,6 +45,10 @@
     &:last-child {
         margin-right: 0;
     }
+}
+
+.dropbtn{
+    font-weight: 500;
 }
 
 .nav__check {

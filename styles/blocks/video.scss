@@ -1,12 +1,26 @@
-.video__inner{
-display: flex;
-flex-direction: column;
+.video__inner {
+    display: flex;
+    flex-direction: column;
 }
 
 .video__description {
     margin-bottom: rem(60px);
+
+}
+
+.video__content {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    margin-bottom: rem(60px);
 }
 
 .video__file {
-    margin-bottom: rem(60px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }

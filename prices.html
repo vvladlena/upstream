@@ -35,14 +35,14 @@
                                         <button class="dropbtn"> Курси
                                         </button>
                                         <div class="dropdown-content">
-                                            <a href="./general.html">Загальний курс англійської мови</a>
-                                            <a href="./speaking.html">Розмовний курс англійської мови</a>
-                                            <a href="#">Англійська мова з нуля для дорослих</a>
-                                            <a href="#">Курси англійської мови для дітей</a>
-                                            <a href="#">Англійська для тестувальників</a>
-                                            <a href="#">Англійська для переїзду за кордон</a>
-                                            <a href="#">Підготовка до IELTS</a>
-                                            <a href="#">Для корпоративних клієнтів. Курси англійської для бізнесу</a>
+                                            <a href="./courses/general.html">Загальний курс англійської мови</a>
+                                            <a href="./courses/speaking.html">Розмовний курс англійської мови</a>
+                                            <a href="./courses/adult.html">Англійська мова з нуля для дорослих</a>
+                                            <a href="./courses/kids.html">Курси англійської мови для дітей</a>
+                                            <a href="./courses/testers.html">Англійська для тестувальників</a>
+                                            <a href="./courses/abroad.html">Англійська для переїзду за кордон</a>
+                                            <a href="./courses/ielts.html">Підготовка до IELTS</a>
+                                            <a href="./courses/business.html">Для корпоративних клієнтів. Курси англійської для бізнесу</a>
                                         </div>
                                     </div>
                                 </li>
@@ -61,10 +61,18 @@
                             </ul>
                         </nav>
 
-                        <select name="countries" id="countries" class="language change-lang">
-                            <option value="pl" selected>PL</option>
-                            <option value="ua">UA</option>
-                        </select>
+                        <ul class="language__list">
+                            <li class="language__item">
+                                <a href="#" class="language__link">
+                                    <img src="./images/icons/ukraine.png" alt="">
+                                </a>
+                            </li>
+                            <li class="language__item">
+                                <a href="#" class="language__link">
+                                    <img src="./images/icons/poland.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -73,78 +81,242 @@
 
             <section class="section prices">
                 <div class="container">
-                    <div class="prices__content">
-                        <div class="cards__language">
-                            <div class="cards__language-item ">Англійська мова</div>
-                            <div class="cards__language-item ">Польська мова</div>
-                        </div>
-                        <ul class="prices__list">
+                    <div class="prices__content prices-tabs">
+                        <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                        <label class="prices__language" for="tab-btn-1">Англійська мова</label>
+                        <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                        <label class="prices__language" for="tab-btn-2">Польська мова</label>
+                        <ul class="prices__list" id="content-1">
                             <li class="prices__item">
                                 <div class="prices__item-title">
                                     <div class="prices__name">Загальний курс англійської мови</div>
-                                    <div class="prices__duration">Тривалість одного заняття — 80 хвилин </div>
+                                    <div class="prices__duration">Тривалість одного заняття — 60 хвилин </div>
                                 </div>
                                 <ul class="prices__money-list">
                                     <li class="prices__money-item">
                                         <div class="prices__people">Група </div>
-                                        <div class="prices__sum">400 зл / міс</div>
+                                        <div class="prices__sum"></div>
+                                        <div class="prices__sum course__price-old">400 зл / міс</div>
+                                        <div class="prices__sum course__price-new ">350 зл / міс</div>
                                     </li>
                                     <li class="prices__money-item">
                                         <div class="prices__people">Пара (2 особи) </div>
                                         <div class="prices__sum">520 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
                                     </li>
                                     <li class="prices__money-item">
                                         <div class="prices__people">Iндивід. заняття</div>
                                         <div class="prices__sum">760 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
                                     </li>
                                 </ul>
                             </li>
                             <li class="prices__item">
                                 <div class="prices__item-title">
-                                    <div class="prices__name">Загальний курс англійської мови</div>
-                                    <div class="prices__duration">Тривалість одного заняття — 80 хвилин </div>
+                                    <div class="prices__name">Розмовний курс англійської</div>
+                                    <div class="prices__duration">Тривалість одного заняття — 60 хвилин </div>
                                 </div>
                                 <ul class="prices__money-list">
                                     <li class="prices__money-item">
                                         <div class="prices__people">Група </div>
-                                        <div class="prices__sum">400 зл / міс</div>
+                                        <div class="prices__sum"></div>
+                                        <div class="prices__sum course__price-old">440 зл / міс</div>
+                                        <div class="prices__sum course__price-new">380 зл / міс</div>
                                     </li>
                                     <li class="prices__money-item">
                                         <div class="prices__people">Пара (2 особи) </div>
-                                        <div class="prices__sum">520 зл / міс</div>
+                                        <div class="prices__sum">560 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
                                     </li>
                                     <li class="prices__money-item">
                                         <div class="prices__people">Iндивід. заняття</div>
-                                        <div class="prices__sum">760 зл / міс</div>
+                                        <div class="prices__sum">800 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
                                     </li>
                                 </ul>
                             </li>
                             <li class="prices__item">
                                 <div class="prices__item-title">
-                                    <div class="prices__name">Загальний курс англійської мови</div>
+                                    <div class="prices__name">Інтенсивний розмовний курс англійської мови</div>
                                     <div class="prices__duration">Тривалість одного заняття — 80 хвилин </div>
                                 </div>
                                 <ul class="prices__money-list">
                                     <li class="prices__money-item">
                                         <div class="prices__people">Група </div>
-                                        <div class="prices__sum">400 зл / міс</div>
+                                        <div class="prices__sum"></div>
+                                        <div class="prices__sum course__price-old">780 зл / міс</div>
+                                        <div class="prices__sum course__price-new">690 зл / міс</div>
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Пара (2 особи) </div>
+                                        <div class="prices__sum">960 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Iндивід. заняття</div>
+                                        <div class="prices__sum">1320 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="prices__item">
+                                <div class="prices__item-title">
+                                    <div class="prices__name">Англійська для школярів</div>
+                                    <div class="prices__duration">Тривалість одного заняття — 60 хвилин </div>
+                                </div>
+                                <ul class="prices__money-list">
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Група </div>
+                                        <div class="prices__sum"></div>
+                                        <div class="prices__sum course__price-old">380 зл / міс</div>
+                                        <div class="prices__sum course__price-new">310 зл / міс</div>
                                     </li>
                                     <li class="prices__money-item">
                                         <div class="prices__people">Пара (2 особи) </div>
                                         <div class="prices__sum">520 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new"></div>
+
                                     </li>
                                     <li class="prices__money-item">
                                         <div class="prices__people">Iндивід. заняття</div>
                                         <div class="prices__sum">760 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="prices__item">
+                                <div class="prices__item-title">
+                                    <div class="prices__name">Підготовка до іспитів  EGZAMIN ÓSMOKLASISTY Z ANGIELSKIEGO / MATURA</div>
+                                    <div class="prices__duration">Тривалість одного заняття — 60 хвилин </div>
+                                </div>
+                                <ul class="prices__money-list">
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Група </div>
+                                        <div class="prices__sum">440 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new"></div>
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Пара (2 особи) </div>
+                                        <div class="prices__sum">640 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Iндивід. заняття</div>
+                                        <div class="prices__sum">720 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="prices__item">
+                                <div class="prices__item-title">
+                                    <div class="prices__name">Підготовка до іспитів FCE / IELTS</div>
+                                    <div class="prices__duration">Тривалість одного заняття — 60 хвилин </div>
+                                </div>
+                                <ul class="prices__money-list">
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Група </div>
+                                        <div class="prices__sum">520 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new"></div>
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Пара (2 особи) </div>
+                                        <div class="prices__sum">640 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Iндивід. заняття</div>
+                                        <div class="prices__sum">880 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
                                     </li>
                                 </ul>
                             </li>
                         </ul>
-                        <div class="prices__bottom">
-                            Курси проходять 2 разі на тиждень. <br>
-                            За умови проходження курсу онлайн ми будемо раді підібрати комфортний для вас час.<br>
-                            Якщо виникли питання дзвоніть на наш телефон +48575900751.
-                        </div>
+
+                        <ul class="prices__list" id="content-2">
+                            <li class="prices__item">
+                                <div class="prices__item-title">
+                                    <div class="prices__name">Загальний курс польської мови з нуля</div>
+                                    <div class="prices__duration">Тривалість одного заняття — 60 хвилин </div>
+                                </div>
+                                <ul class="prices__money-list">
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Група </div>
+                                        <div class="prices__sum"></div>
+                                        <div class="prices__sum course__price-old">400 зл / міс</div>
+                                        <div class="prices__sum course__price-new">350 зл / міс</div>
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Пара (2 особи) </div>
+                                        <div class="prices__sum">520 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Iндивід. заняття</div>
+                                        <div class="prices__sum">760 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="prices__item">
+                                <div class="prices__item-title">
+                                    <div class="prices__name">Інтенсивний курс польської мови з нуля</div>
+                                    <div class="prices__duration">Тривалість одного заняття — 80 хвилин </div>
+                                </div>
+                                <ul class="prices__money-list">
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Група </div>
+                                        <div class="prices__sum">600 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Пара (2 особи) </div>
+                                        <div class="prices__sum">780 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+
+                                    </li>
+                                    <li class="prices__money-item">
+                                        <div class="prices__people">Iндивід. заняття</div>
+                                        <div class="prices__sum">1140 зл / міс</div>
+                                        <div class="prices__sum course__price-old"></div>
+                                        <div class="prices__sum course__price-new "></div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="prices__bottom">
+                        Курси проходять 2 рази на тиждень. <br>
+                        За умови проходження курсу онлайн ми будемо раді підібрати комфортний для вас час.<br>
+                        Якщо виникли питання дзвоніть на наш телефон +48575900751.
                     </div>
                 </div>
             </section>

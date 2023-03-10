@@ -28,9 +28,10 @@
 
 
 .card {
+    position: relative;
     background: $firstColor;
     border-radius: 30px;
-    padding: rem(40px) rem(20px);
+    padding: rem(40px) rem(20px) rem(20px);
     color: $lightColor;
     border: 8px solid $lightColor;
     display: flex;
@@ -63,7 +64,6 @@
 .card_teacher {
     @include tablets {
         align-items: center;
-        justify-content: center;
         text-align: center;
 
     }
@@ -86,6 +86,10 @@
 
 .card__description-item {
     margin-bottom: rem(10px);
+    display: flex;
+}
+.card__description-symbol{
+    margin-right: 5px;
 }
 
 .card__price {
@@ -112,7 +116,7 @@
     max-height: 100%;
     margin-bottom: rem(30px);
     width: 260px;
-    height: 180px;
+    height: 230px;
 }
 
 .card__image-img {
